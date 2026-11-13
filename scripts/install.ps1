@@ -16,7 +16,8 @@ if ($installRoot.StartsWith($sourceRoot+[IO.Path]::DirectorySeparatorChar,[Strin
 $marker=Join-Path $installRoot '.local/installation.json'
 if (Test-Path -LiteralPath $installRoot) {
     $contents=@(Get-ChildItem -LiteralPath $installRoot -Force)
-    if ($contents.Count -gt 0) {
+    # Setting up inside the package folder itself (RecompLauncher) is the one allowed non-empty case.
+    if ($contents.Count -gt 0 -and $installRoot -ne $sourceRoot) {
         if (-not (Test-Path -LiteralPath $marker)) { throw 'The destination is not empty. Choose a new empty folder or an existing Super Monaco Duo-Remix Recomp installation.' }
         $installed=Get-Content -LiteralPath $marker -Raw | ConvertFrom-Json
         if ($installed.product -ne 'SuperMonacoDuoRecomp') { throw 'This folder belongs to a different product.' }
@@ -35,7 +36,7 @@ if ($sourceRoot -ne $installRoot) {
         $from=Join-Path $sourceRoot $name
         if (Test-Path -LiteralPath $from) { Copy-Item -LiteralPath $from -Destination $installRoot -Recurse -Force }
     }
-    foreach ($name in @('CMakeLists.txt','SuperMonacoDuoRecomp.exe','SDL2.dll','README.md','CREDITS.md','CONTRIBUTING.md','THIRD_PARTY_NOTICES.md','Jogar.cmd')) {
+    foreach ($name in @('CMakeLists.txt','SuperMonacoDuoRecomp.exe','SDL2.dll','README.md','CREDITS.md','CONTRIBUTING.md','THIRD_PARTY_NOTICES.md','Jogar.cmd','recomplauncher.json')) {
         $from=Join-Path $sourceRoot $name
         if (Test-Path -LiteralPath $from) { Copy-Item -LiteralPath $from -Destination $installRoot -Force }
     }
