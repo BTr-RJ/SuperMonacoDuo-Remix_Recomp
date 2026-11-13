@@ -6,6 +6,8 @@ public test: continuous zoom with arcade version sound effects and art, team
 colours, analog steering and a victory theme in GP II. The English installer
 builds both games locally from your own ROMs.
 
+[![Get it on RecompLauncher](https://recomplauncher.com/assets/press/launcher/badge-dark.svg)](https://recomplauncher.com/)
+
 ![Super Monaco Duo-Remix Recomp launcher](docs/media/launcher-0.50.png)
 
 ## Support the project
@@ -38,6 +40,9 @@ of the first game is not supported. See the exact hashes in
 The package contains no ROMs and no generated game code. Microsoft C++ tools
 (Visual Studio 2022 Build Tools) are required; the installer offers the official
 signed Microsoft installer if they are missing, with administrator consent.
+
+**RecompLauncher:** releases after 0.50 include a `recomplauncher.json`, so the games can be set up and started from [RecompLauncher](https://recomplauncher.com/) too (it asks for the folder with your ROMs and builds both games locally; the Microsoft C++ tools must already be installed).
+ecomplauncher.json, so the games can be set up and started from [RecompLauncher](https://recomplauncher.com/) too (it asks for the folder with your ROMs and builds both games locally; the Microsoft C++ tools must already be installed).
 
 See [installation and updates](docs/INSTALLATION.md), [controls](docs/CONTROLS.md)
 and [building from source](docs/BUILDING.md).

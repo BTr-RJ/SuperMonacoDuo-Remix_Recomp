@@ -29,6 +29,10 @@ You can also run the installer from PowerShell:
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/install.ps1 -Destination "D:\Games\SuperMonacoDuo" -RomFolder1 "D:\ROMs"
 ```
 
+## RecompLauncher
+
+Releases after 0.50 carry `recomplauncher.json` at the top of the ZIP (next to `SuperMonacoDuoRecomp.exe`). RecompLauncher asks for the folder that holds your ROMs and runs `tools/recomplauncher_prepare.py`, which verifies both ROMs by SHA-256 and builds the games into `build/native20` with the same `scripts/install.ps1` as the launcher. It never opens a window or installs anything, so the Microsoft C++ Build Tools must already be present; if not, the step fails with a message. Then **Play** starts the project launcher. Do not mix the project's own updater and RecompLauncher's updates on the same folder.
+
 ## Tools
 
 The release package already carries `.tools` (Python, CMake, Ninja, the patched

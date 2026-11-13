@@ -16,10 +16,10 @@ ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location('updater', ROOT/'tools/update_release.py')
 updater = importlib.util.module_from_spec(spec); spec.loader.exec_module(updater)
 
-TOP = ('CMakeLists.txt', 'README.md', 'CREDITS.md', 'CONTRIBUTING.md', 'THIRD_PARTY_NOTICES.md', 'Jogar.cmd', 'SDL2.dll')
+TOP = ('CMakeLists.txt', 'README.md', 'CREDITS.md', 'CONTRIBUTING.md', 'THIRD_PARTY_NOTICES.md', 'Jogar.cmd', 'SDL2.dll', 'recomplauncher.json')
 DOCS = ('INSTALLATION.md', 'CONTROLS.md', 'BUILDING.md', 'VIDEO.md', 'RELEASE-0.50.md', 'ROADMAP.md')
 UNUSED_ASSETS = ('assets/audio17/',)   # superseded sound pack, not read by the runtime
-TOOLS = ('prepare_inputs.py', 'patch_runtime.py', 'install_roms.py', 'update_release.py', 'validate_installed.py', 'publish_release.py')
+TOOLS = ('prepare_inputs.py', 'patch_runtime.py', 'install_roms.py', 'update_release.py', 'validate_installed.py', 'publish_release.py', 'recomplauncher_prepare.py')
 SCRIPTS = ('build.ps1', 'install.ps1')
 TOOL_DIRS = ('python', 'cmake', 'ninja', 'engine', 'librashader')
 SKIP_SUFFIX = {'.pyc', '.pdb', '.exp', '.partial', '.zip'}
@@ -28,7 +28,8 @@ REQUIRED = ('SuperMonacoDuoRecomp.exe', 'scripts/install.ps1', 'scripts/build.ps
 # Extra files a real public release must carry (the synthetic tests build smaller trees).
 PUBLIC_REQUIRED = ('README.md', 'CREDITS.md', 'CONTRIBUTING.md', 'THIRD_PARTY_NOTICES.md', 'games/supported-roms.json',
                    'assets/launcher/masthead.png', 'assets/audio18/arcade-sound.sb17', 'assets/audio18/gp2-victory.wav',
-                   'assets/audio18/PROVENANCE.json', 'src/presentation/formation_art20.h', 'docs/licenses/SDL2.txt')
+                   'assets/audio18/PROVENANCE.json', 'src/presentation/formation_art20.h', 'docs/licenses/SDL2.txt',
+                   'recomplauncher.json', 'tools/recomplauncher_prepare.py')
 
 def sha(path):
     h = hashlib.sha256()

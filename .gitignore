@@ -50,6 +50,7 @@ __pycache__/
 !/tools/probe.py
 !/tools/make_comparison_gifs.py
 !/tools/make_masthead.py
+!/tools/recomplauncher_prepare.py
 !/tools/extract_arcade.py
 !/tools/extract_arcade_props21.py
 /tests/fixtures/*

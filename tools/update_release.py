@@ -31,7 +31,7 @@ BUILD='build/native20'  # stable install location; keep equal to scripts/install
 GAMES=('smgp1','smgp2')  # both qualified cartridges are required by tools/prepare_inputs.py
 MAX_ENTRIES=25000  # the packaged toolchain alone has ~9000 files (CMake modules)
 CURRENT='0.50'  # keep equal to the launcher SMGP_VERSION macro
-TOP={'CMakeLists.txt','README.md','CREDITS.md','CONTRIBUTING.md','THIRD_PARTY_NOTICES.md','Jogar.cmd','SuperMonacoDuoRecomp.exe','SDL2.dll'}
+TOP={'CMakeLists.txt','README.md','CREDITS.md','CONTRIBUTING.md','THIRD_PARTY_NOTICES.md','Jogar.cmd','SuperMonacoDuoRecomp.exe','SDL2.dll','recomplauncher.json'}
 RESERVED={'CON','PRN','AUX','NUL',*(f'COM{i}' for i in range(1,10)),*(f'LPT{i}' for i in range(1,10))}
 
 def version(text):
