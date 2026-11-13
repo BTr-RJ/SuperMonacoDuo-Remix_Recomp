@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 ap = argparse.ArgumentParser()
 ap.add_argument('--src', default='build/validation/media50')
 ap.add_argument('--out', default='docs/media/0.50')
-ap.add_argument('--step', type=int, default=2, help='keep every Nth consecutive frame (2 = 30 fps)')
+ap.add_argument('--fps', type=int, default=50, help='output rate; GIF delays are whole centiseconds, so 50 fps (2 cs) is the fastest rate browsers honour')
 a = ap.parse_args()
 SRC, OUT = ROOT / a.src, ROOT / a.out
 OUT.mkdir(parents=True, exist_ok=True)
@@ -26,7 +26,8 @@ BAR = 26
 report = {}
 
 for game in ('smgp1', 'smgp2'):
-    names = [f'{seg}{i:03d}.png' for seg, n in SEGMENTS for i in range(n)][::a.step]
+    every = [f'{seg}{i:03d}.png' for seg, n in SEGMENTS for i in range(n)]      # consecutive 59.94 Hz ticks
+    names = [every[int(i * 60 / a.fps)] for i in range(round(len(every) * a.fps / 60))]   # resampled, same elapsed time
     tmp = Path(tempfile.mkdtemp(prefix=f'gif-{game}-'))
     for k, name in enumerate(names):
         o = Image.open(SRC / 'orig' / game / name).convert('RGB')
@@ -38,7 +39,7 @@ for game in ('smgp1', 'smgp2'):
         d.text((8, 3), 'ORIGINAL MEGA DRIVE', font=FONT, fill=(190, 196, 200))
         d.text((w + 12, 3), 'DUO-REMIX RECOMP 0.50', font=FONT, fill=(255, 75, 54))
         canvas.save(tmp / f'f{k:04d}.png')
-    fps = 60 // a.step
+    fps = a.fps
     gif = OUT / f'{game}-comparison.gif'
     subprocess.run([str(FFMPEG), '-y', '-loglevel', 'error', '-framerate', str(fps), '-i', str(tmp / 'f%04d.png'),
                     '-vf', 'split[a][b];[a]palettegen=max_colors=128:stats_mode=full[p];[b][p]paletteuse=dither=none',

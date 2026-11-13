@@ -2,11 +2,18 @@
 
 A native Windows x64 fan project for **Super Monaco GP** (Mega Drive / Genesis, 1990)
 and **Ayrton Senna's Super Monaco GP II** (1992). Version **0.50** is the first
-public test: continuous zoom with sound effects, arcade-version art, team
+public test: continuous zoom with arcade version sound effects and art, team
 colours, analog steering and a victory theme in GP II. The English installer
 builds both games locally from your own ROMs.
 
 ![Super Monaco Duo-Remix Recomp launcher](docs/media/launcher-0.50.png)
+
+## Support the project
+
+[![Support BTr-RJ on Ko-fi](docs/media/kofi-support.jpg)](https://ko-fi.com/btrrj)
+
+All support will go entirely towards AI credits (Codex, Claude Code) to accelerate
+the release of current and future projects.
 
 ## Install and play
 
@@ -51,12 +58,12 @@ the native raster renderer of this project's runtime (`SMGP_ORIGINAL=1`).
 ![Ayrton Senna's Super Monaco GP II: original Mega Drive rendering vs Duo-Remix 0.50](docs/media/0.50/smgp2-comparison.gif)
 
 Captured from a QA replay of controller input on the first track of each game, not a
-played campaign. The GIFs are 5 seconds at 30 fps with 128-colour palettes, so some
-edge colours are approximated. [Capture details and hashes](docs/media/0.50/comparison.json).
+played campaign. The GIFs are 5 seconds at 50 fps (the fastest rate browsers play reliably;
+the source is 59.94 Hz) with 128-colour palettes, so some edge colours are approximated. [Capture details and hashes](docs/media/0.50/comparison.json).
 
 ## What's new in 0.50
 
-- **Continuous zoom with sound effects.** Cars, signs, tyres, trees, arches and
+- **Continuous zoom with arcade version sound effects and art.** Cars, signs, tyres, trees, arches and
   tunnel structures grow smoothly instead of switching sprite sizes. Engines,
   continuous tyre skids, impacts and sparks use the original arcade sound program
   and PCM bank, driven by what happens in the cartridge race.
@@ -146,13 +153,6 @@ Report the launcher version, game revision/SHA-256, reproduction steps, Windows
 version, GPU/controller, the video time of the problem if you have a recording,
 and the relevant log excerpt (`.local/logs`). Do not upload ROMs, generated code,
 saves or credentials. Read [CONTRIBUTING.md](CONTRIBUTING.md) before sending a change.
-
-## Support the project
-
-[![Support BTr-RJ on Ko-fi](docs/media/kofi-support.jpg)](https://ko-fi.com/btrrj)
-
-All support will go entirely towards AI credits (Codex, Claude Code) to accelerate
-the release of current and future projects.
 
 ## Credits and notices
 

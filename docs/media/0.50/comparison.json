@@ -3,19 +3,19 @@
   "gifs": {
     "smgp1": {
       "file": "smgp1-comparison.gif",
-      "frames": 150,
-      "fps": 30,
-      "bytes": 1259392,
-      "sha256": "354625fd6aaee33502ce35b4eea64cf4934e8d172c84b5a6fb392ef8d0f7fe19",
+      "frames": 250,
+      "fps": 50,
+      "bytes": 1563904,
+      "sha256": "103d0c69fe0f0eaca0f3d2e19f2b0fac2170cb48a947576227fd863120b69a98",
       "replay": "tests/fixtures/smgp1-cockpit20.input",
       "title": "SUPER MONACO GP"
     },
     "smgp2": {
       "file": "smgp2-comparison.gif",
-      "frames": 150,
-      "fps": 30,
-      "bytes": 1177049,
-      "sha256": "5a27009df0eea98a8e23a6903229e54f7817825552e6925a69b2da1fde8411dc",
+      "frames": 250,
+      "fps": 50,
+      "bytes": 1463971,
+      "sha256": "ed36766c76e9cbf82ea93b93a7cbea33b48b47354cea06f1836f52cc8c21256e",
       "replay": "tests/fixtures/smgp2-cockpit20.input",
       "title": "AYRTON SENNA'S SUPER MONACO GP II"
     }
