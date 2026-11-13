@@ -160,6 +160,8 @@ struct PlantedTree {double distance,lateral;int art;bool settled=false;unsigned 
 std::vector<PlantedTree> planted_trees;
 unsigned tree_track_length=0,tree_seed=0;
 ArcadeArt ending_banner,shared_gameover,shared_retire;std::vector<uint32_t> ending_background;int ending_width=0;bool ending_active=false;
+// Native (H32) top-left of the letters at the instant the zoom takes over; the zoom starts there at 1:1.
+int ending_anchor_x=28,ending_anchor_y=146;
 bool result_retire=false,ending_is_retire=false;
 std::vector<uint32_t> last_race_background;int last_race_width=0;
 unsigned ending_age=0;
@@ -1394,6 +1396,8 @@ void capture_ending(const GVDP*v){
   if(failed_senna||retired){
    if(!ending_active){
     ending_is_retire=retired&&shared_retire.width;ending_banner=ending_is_retire?shared_retire:shared_gameover;ending_age=0;
+    // GAME OVER rests where the World cartridge parks it; RETIRE starts centred.
+    ending_anchor_x=ending_is_retire?(256-ending_banner.width)/2:28;ending_anchor_y=ending_is_retire?128-ending_banner.height/2:146;
     if(ending_is_retire){ending_background=last_race_background;ending_width=last_race_width;}
    }
    if(ending_is_retire)result_retire=true;
@@ -1403,6 +1407,13 @@ void capture_ending(const GVDP*v){
  }
  unsigned base=(v->reg[5]&((v->reg[12]&1)?0x7e:0x7f))<<9,link=0;std::vector<Piece>letters;
  int top=10000,bottom=-10000,left=10000,right=-10000;
+ if(getenv("SMGP_LETTER_TRACE")){
+  unsigned l2=0;fprintf(stderr,"[SMGP LETTERS] frame=%u age=%u active=%d",tick,ending_age,ending_active);
+  for(int n=0;n<14;n++){unsigned a=base+l2*8,attr=word(v,a+4),size=v->vram[(a+2)&65535];
+   fprintf(stderr," |%d:%d,%d %dx%d t%u f%u pr%d",l2,(word(v,a+6)&511)-128,(word(v,a)&511)-128,(((size>>2)&3)+1)*8,((size&3)+1)*8,attr&2047,(attr>>11)&3,(attr>>15)&1);
+   l2=v->vram[(a+3)&65535]&127;if(!l2)break;}
+  fprintf(stderr,"\n");
+ }
  // Qualified original large GAME OVER row: eight high-priority 24x24
  // glyph pieces in palette zero, all on the same baseline, inside H32.
  // Read the actual SAT/VRAM, never repurpose ordinary HUD/car glyphs.
@@ -1418,7 +1429,7 @@ void capture_ending(const GVDP*v){
  if(right-left<100||right-left>280||bottom-top>64)return;
  if(!ending_active){
   ending_is_retire=false;
-  ending_age=0;ending_banner.width=right-left;ending_banner.height=bottom-top;ending_banner.pixels.assign(ending_banner.width*ending_banner.height,0);
+  ending_age=0;ending_anchor_x=left;ending_anchor_y=top;ending_banner.width=right-left;ending_banner.height=bottom-top;ending_banner.pixels.assign(ending_banner.width*ending_banner.height,0);
   for(const auto&p:letters)for(int y=0;y<p.h;y++)for(int x=0;x<p.w;x++)if(auto c=p.pixels[y*p.w+x])ending_banner.pixels[(p.y-top+y)*ending_banner.width+p.x-left+x]=c;
  }
  for(const auto&p:letters)selected[p.sat]=true;
@@ -1430,8 +1441,12 @@ void ending_overlay(std::vector<uint32_t>&out,int stride,int width,int height){
  double t=std::clamp(ending_age/90.0,0.0,1.0),ease=t*t*(3-2*t);
  double unit=24.0/ending_banner.height;
  double maximum=ending_is_retire?std::min((height-40.0)/ending_banner.height,(width-20.0)/ending_banner.width):std::min(3.4*unit,(width-20.0)/ending_banner.width);
- double zoom=.20*unit+(maximum-.20*unit)*ease;
- double w=ending_banner.width*zoom,h=ending_banner.height*zoom,x0=(width-w)*.5,y0=128-h*.5;
+ // Hand-off from the cartridge: begin at the native size and place (1:1), then grow while the
+ // centre glides to the screen centre. Restarting from a small size made the word shrink first.
+ double zoom_start=1.0,zoom=zoom_start+(std::max(maximum,zoom_start)-zoom_start)*ease;
+ double native_left=(width-256)*.5+ending_anchor_x,centre_x=native_left+ending_banner.width*.5,centre_y=ending_anchor_y+ending_banner.height*.5;
+ centre_x+=(width*.5-centre_x)*ease;centre_y+=(128.0-centre_y)*ease;
+ double w=ending_banner.width*zoom,h=ending_banner.height*zoom,x0=centre_x-w*.5,y0=centre_y-h*.5;
  for(int y=std::max(0,int(std::floor(y0)));y<std::min(height,int(std::ceil(y0+h)));y++)
   for(int x=std::max(0,int(std::floor(x0)));x<std::min(width,int(std::ceil(x0+w)));x++){
    uint32_t background=out[y*stride+x];unsigned red=0,green=0,blue=0;
@@ -2476,7 +2491,7 @@ extern "C" const uint32_t *smgp_gpu_compose(SDL_Renderer*r,const uint32_t*input,
  if(result_retire&&smooth_zoom&&height==224&&r){
   load_arcade();
   if(shared_retire.width){
-   if(!ending_active){ending_banner=shared_retire;ending_is_retire=true;ending_age=0;ending_active=true;}
+   if(!ending_active){ending_banner=shared_retire;ending_is_retire=true;ending_age=0;ending_active=true;ending_anchor_x=(256-shared_retire.width)/2;ending_anchor_y=128-shared_retire.height/2;}
    if(ending_background.size()!=size_t(stride)*height){ending_background.assign(input,input+size_t(stride)*height);ending_width=width;}
    composed.assign(size_t(stride)*height,0xff000000u);
    // The result changes H32 to H40. Preserve the frozen picture's DISPLAY
@@ -3103,7 +3118,7 @@ extern "C" void smgp_scene_observe(uint32_t pc){
  if(game_index&&pc==0x11c5e&&smooth_zoom){
   result_retire=true;load_arcade();
   if(shared_retire.width){
-   if(!ending_active){ending_age=0;ending_background=last_race_background;ending_width=last_race_width;}
+   if(!ending_active){ending_age=0;ending_background=last_race_background;ending_width=last_race_width;ending_anchor_x=(256-shared_retire.width)/2;ending_anchor_y=128-shared_retire.height/2;}
    ending_banner=shared_retire;ending_is_retire=true;ending_active=true;
   }
   if(getenv("SMGP_PLAYER_TRACE"))fprintf(stderr,"[SMGP RETIRE NATIVE] frame=%u pc=11C5E signed_rank=%d\n",tick,(int16_t)rw(0xff5a));

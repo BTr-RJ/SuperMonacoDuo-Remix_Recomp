@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.21)
-project(SuperMonacoDuoRecomp VERSION 0.50.0 LANGUAGES C CXX)
+project(SuperMonacoDuoRecomp VERSION 0.60.0 LANGUAGES C CXX)
 option(SMGP_COPY_ROOT_LAUNCHER "Update the root launcher after a local build" ON)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
@@ -14,14 +14,20 @@ set_target_properties(SDL2::SDL2 PROPERTIES IMPORTED_IMPLIB "${SDL_ROOT}/lib/x64
  IMPORTED_LOCATION "${SDL_ROOT}/lib/x64/SDL2.dll" INTERFACE_INCLUDE_DIRECTORIES "${SDL_ROOT}/include;${SDL_ROOT}/include/SDL2")
 genesisrecomp_runner_sources(RUNNER_SOURCES TRACE ON REVERSE_DEBUG OFF)
 list(REMOVE_ITEM RUNNER_SOURCES "${RUNNER_ROOT}/main.c")
+# rcheevos (MIT, RetroAchievements.org): only the offline trigger runtime is built.
+file(GLOB RC_SOURCES CONFIGURE_DEPENDS "${CMAKE_SOURCE_DIR}/src/third_party/rcheevos/src/runtime/*.c"
+ "${CMAKE_SOURCE_DIR}/src/third_party/rcheevos/src/util/*.c")
+add_library(rcheevos_runtime STATIC ${RC_SOURCES})
+target_include_directories(rcheevos_runtime PUBLIC "${CMAKE_SOURCE_DIR}/src/third_party/rcheevos/include")
+target_compile_definitions(rcheevos_runtime PRIVATE _CRT_SECURE_NO_WARNINGS RC_DISABLE_LUA)
 foreach(game smgp1 smgp2)
  set(input "${CMAKE_SOURCE_DIR}/.local/build-inputs/${game}")
  genesisrecomp_add_generated_sources(GENERATED ${game} "${input}" "game.bin")
  add_executable(${game} ${RUNNER_SOURCES} "${RUNNER_ROOT}/main.c" "${RUNNER_ROOT}/game_cycles.c"
-  src/game/game_spec.c src/game/controls.cpp src/game/control_config.cpp src/audio/sound.cpp src/audio/arcade_board.cpp
+  src/game/game_spec.c src/game/controls.cpp src/game/control_config.cpp src/achievements/achievements.cpp src/audio/sound.cpp src/audio/arcade_board.cpp
   "${RUNNER_ROOT}/external/ymfm/src/ymfm_opm.cpp" src/presentation/gpu_present.cpp src/presentation/motion_bridge.cpp src/presentation/scene.cpp
   src/app.manifest ${GENERATED} "${GENERATED_CYCLES}")
- target_include_directories(${game} PRIVATE "${GENERATED_DIR}" src/game src/presentation src/audio
+ target_include_directories(${game} PRIVATE "${GENERATED_DIR}" src/game src/presentation src/audio src/achievements
   "${CMAKE_SOURCE_DIR}/.tools/librashader/include" "${RUNNER_ROOT}" "${RUNNER_ROOT}/include"
   "${RUNNER_ROOT}/video" "${RUNNER_ROOT}/audio" "${RUNNER_ROOT}/external/clowncommon"
   "${RUNNER_ROOT}/external/superzazu" "${RUNNER_ROOT}/external/ymfm/src"
@@ -31,7 +37,7 @@ foreach(game smgp1 smgp2)
   GEN_ENABLE_TRACE=1 RECOMP_LAUNCHER=0 GENESIS_HAS_RECOMP_NET=0 SONIC_REVERSE_DEBUG=0
   GENESIS_GAME_VERSION="${PROJECT_VERSION}" GAME_${game}=1)
  target_compile_options(${game} PRIVATE /W3 /bigobj /utf-8)
- target_link_libraries(${game} PRIVATE SDL2::SDL2 retcomm_rbengine ws2_32 winmm comdlg32 d3d11 dxgi)
+ target_link_libraries(${game} PRIVATE SDL2::SDL2 rcheevos_runtime retcomm_rbengine ws2_32 winmm comdlg32 d3d11 dxgi)
  genesisrecomp_runner_target(${game})
  set_target_properties(${game} PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/${game}")
  add_custom_command(TARGET ${game} POST_BUILD COMMAND "${CMAKE_COMMAND}" -E copy_if_different

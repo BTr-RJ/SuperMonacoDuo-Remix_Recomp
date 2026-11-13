@@ -1,4 +1,4 @@
-"""Build the ROM-free installer ZIP + SHA-256 manifest that tools/update_release.py expects.
+﻿"""Build the ROM-free installer ZIP + SHA-256 manifest that tools/update_release.py expects.
 
 Local only: nothing is uploaded. Upload the ZIP to a GitHub release tagged v<version>;
 GitHub then reports the asset digest that the updater compares with the downloaded bytes.
@@ -17,9 +17,9 @@ spec = importlib.util.spec_from_file_location('updater', ROOT/'tools/update_rele
 updater = importlib.util.module_from_spec(spec); spec.loader.exec_module(updater)
 
 TOP = ('CMakeLists.txt', 'README.md', 'CREDITS.md', 'CONTRIBUTING.md', 'THIRD_PARTY_NOTICES.md', 'Jogar.cmd', 'SDL2.dll', 'recomplauncher.json')
-DOCS = ('INSTALLATION.md', 'CONTROLS.md', 'BUILDING.md', 'VIDEO.md', 'RELEASE-0.50.md', 'ROADMAP.md')
+DOCS = ('INSTALLATION.md', 'CONTROLS.md', 'BUILDING.md', 'VIDEO.md', 'RELEASE-0.50.md', 'RELEASE-0.60.md', 'ROADMAP.md')
 UNUSED_ASSETS = ('assets/audio17/',)   # superseded sound pack, not read by the runtime
-TOOLS = ('prepare_inputs.py', 'patch_runtime.py', 'install_roms.py', 'update_release.py', 'validate_installed.py', 'publish_release.py', 'recomplauncher_prepare.py')
+TOOLS = ('prepare_inputs.py', 'patch_runtime.py', 'install_roms.py', 'update_release.py', 'validate_installed.py', 'publish_release.py', 'recomplauncher_prepare.py', 'import_ra_patch.py')
 SCRIPTS = ('build.ps1', 'install.ps1')
 TOOL_DIRS = ('python', 'cmake', 'ninja', 'engine', 'librashader')
 SKIP_SUFFIX = {'.pyc', '.pdb', '.exp', '.partial', '.zip'}
@@ -29,7 +29,9 @@ REQUIRED = ('SuperMonacoDuoRecomp.exe', 'scripts/install.ps1', 'scripts/build.ps
 PUBLIC_REQUIRED = ('README.md', 'CREDITS.md', 'CONTRIBUTING.md', 'THIRD_PARTY_NOTICES.md', 'games/supported-roms.json',
                    'assets/launcher/masthead.png', 'assets/audio18/arcade-sound.sb17', 'assets/audio18/gp2-victory.wav',
                    'assets/audio18/PROVENANCE.json', 'src/presentation/formation_art20.h', 'docs/licenses/SDL2.txt',
-                   'recomplauncher.json', 'tools/recomplauncher_prepare.py')
+                   'recomplauncher.json', 'tools/recomplauncher_prepare.py',
+                   'assets/achievements/smgp1.json', 'assets/achievements/smgp2.json', 'src/achievements/achievements.cpp',
+                   'src/third_party/rcheevos/LICENSE', 'docs/RELEASE-0.60.md')
 
 def sha(path):
     h = hashlib.sha256()
@@ -126,3 +128,4 @@ if __name__ == '__main__':
     except (ValueError, OSError) as error:
         sys.exit(str(error))
     print(f"{archive} {asset['size']} bytes {asset['digest']}")
+

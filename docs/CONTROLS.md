@@ -35,5 +35,14 @@ right stick up/down does the same, race only. The cartridge reads buttons as on/
 the pedal is switched on and off several times per frame in proportion to how far it is
 pressed. With the option off, a 50% threshold applies.
 
+## Achievements
+
+**F6** opens or closes the offline achievements panel in both games; while it is open,
+Up/Down move the selection and PgUp/PgDn change page. The description of the selected
+achievement is shown under the list. The game keeps running behind the panel, so open it
+when stopped or paused. A toast appears at the top when an achievement unlocks.
+Progress lives in `.local/achievements/` (delete the files there to start over);
+setting `SMGP_ACHIEVEMENTS=0` turns the feature off.
+
 Not covered by the game: force feedback and wheel/pedal peripherals other than SDL
 game controllers.

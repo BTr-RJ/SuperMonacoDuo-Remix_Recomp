@@ -13,7 +13,7 @@
 #include <cwctype>
 #include "updates.h"
 #ifndef SMGP_VERSION
-#define SMGP_VERSION "0.50"
+#define SMGP_VERSION "0.60"
 #endif
 namespace {
 namespace fs=std::filesystem;

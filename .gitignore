@@ -1,4 +1,4 @@
-# Private inputs and generated game code
+﻿# Private inputs and generated game code
 /*.zip
 *.bin
 /.local/
@@ -37,6 +37,7 @@ __pycache__/
 !/docs/CONTROLS.md
 !/docs/INSTALLATION.md
 !/docs/RELEASE-0.50.md
+!/docs/RELEASE-0.60.md
 !/docs/VIDEO.md
 !/docs/ROADMAP.md
 /docs/evidence*/
@@ -51,6 +52,7 @@ __pycache__/
 !/tools/make_comparison_gifs.py
 !/tools/make_masthead.py
 !/tools/recomplauncher_prepare.py
+!/tools/import_ra_patch.py
 !/tools/extract_arcade.py
 !/tools/extract_arcade_props21.py
 /tests/fixtures/*

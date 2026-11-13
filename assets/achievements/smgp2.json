@@ -1,0 +1,486 @@
+{
+ "game": "smgp2",
+ "ra_game_id": 103,
+ "ra_title": "Ayrton Senna's Super Monaco GP II",
+ "source": "RetroAchievements.org core set (official achievement logic)",
+ "total_points": 585,
+ "achievements": [
+  {
+   "id": 106974,
+   "title": "Pole Position",
+   "description": "Qualify in 1st position in a World Championship race",
+   "points": 2,
+   "badge": "116864",
+   "memaddr": "P:0xH0020bd=126_0xH0020bd=203_0xH00ff56=0S0xH006d2a=1S0xH006d2a=48",
+   "type": ""
+  },
+  {
+   "id": 106975,
+   "title": "Pop the Champagne",
+   "description": "Win a World Championship race",
+   "points": 3,
+   "badge": "117086",
+   "memaddr": "P:0xH0020bd=126_P:0xH00f522=38_0xH0020bd=0_0xH00cc20=208_0xH00ff5a=0S0xH006d2a=1S0xH006d2a=48",
+   "type": ""
+  },
+  {
+   "id": 106976,
+   "title": "On a Roll",
+   "description": "Finish in the points in three consecutive World Championship races",
+   "points": 5,
+   "badge": "117551",
+   "memaddr": "P:0xH0020bd=126_N:0xH0020bd=0_N:0xH00cc20=208_R:0xH00ff5a>5_M:0xH00c104>d0xH00c104.3.S0xH006d2a=1S0xH006d2a=48",
+   "type": ""
+  },
+  {
+   "id": 106977,
+   "title": "Fast Five",
+   "description": "Win 5 World Championship races",
+   "points": 25,
+   "badge": "117545",
+   "memaddr": "P:0xH0020bd=126_N:0xH00cc20=208_N:0xH00ff5a=0_M:0xH00c104>d0xH00c104.5.S0xH006d2a=1S0xH006d2a=48",
+   "type": ""
+  },
+  {
+   "id": 106978,
+   "title": "World Championship Contender",
+   "description": "Score 25 points in a World Championship season ",
+   "points": 5,
+   "badge": "116861",
+   "memaddr": "R:0xH0020bd=126_0xH00c104>=25_0xH00c104<25.5.S0xH006d2a=1S0xH006d2a=48",
+   "type": ""
+  },
+  {
+   "id": 106979,
+   "title": "World Championship Professional",
+   "description": "Score 50 points in a World Championship season ",
+   "points": 10,
+   "badge": "116862",
+   "memaddr": "R:0xH0020bd=126_0xH00c104>=50_0xH00c104<50.5.S0xH006d2a=1S0xH006d2a=48",
+   "type": ""
+  },
+  {
+   "id": 106980,
+   "title": "World Championship Elite",
+   "description": "Score 100 points in a World Championship season ",
+   "points": 25,
+   "badge": "116863",
+   "memaddr": "R:0xH0020bd=126_0xH00c104>=100_0xH00c104<100.5.S0xH006d2a=1S0xH006d2a=48",
+   "type": ""
+  },
+  {
+   "id": 106983,
+   "title": "Am I a Joke to You?",
+   "description": "Join the Joke team in the World Championship [Master Difficulty]",
+   "points": 10,
+   "badge": "116818",
+   "memaddr": "P:0xH0020bd=126_0xH006d2a=48_0xH00c088!=5.5._0xH00c088=5",
+   "type": ""
+  },
+  {
+   "id": 106984,
+   "title": "The Prancing Horse",
+   "description": "Join the Firenze team [Master Difficulty]",
+   "points": 10,
+   "badge": "116817",
+   "memaddr": "P:0xH0020bd=126_0xH006d2a=48_0xH00c088!=2.5._0xH00c088=2",
+   "type": ""
+  },
+  {
+   "id": 106985,
+   "title": "Prima",
+   "description": "Join the Madonna team in the World Championship [Master Difficulty]",
+   "points": 25,
+   "badge": "116868",
+   "memaddr": "P:0xH0020bd=126_0xH00c088!=0.5._0xH00c088=0_0xH006d2a=48",
+   "type": ""
+  },
+  {
+   "id": 106981,
+   "title": "World Championship Champion",
+   "description": "Win the World Championship",
+   "points": 50,
+   "badge": "116819",
+   "memaddr": "P:0xH0020bd=126_N:0xH0020bd=136_N:0xH00cc20=0_0xH00ff5a=0.70._R:0xH0020bd!=136S0xH006d2a=1S0xH006d2a=48",
+   "type": "progression"
+  },
+  {
+   "id": 106982,
+   "title": "Cruising",
+   "description": "In a World Championship race, be 30 seconds or more in front of second place [Beginner Difficulty]",
+   "points": 4,
+   "badge": "116892",
+   "memaddr": "P:0xH0020bd=126_0xH0020bd=102_0xH00ff5a=0_0xH00fedf>=48_0xH00fc0a!=0_0xH006d2a=1",
+   "type": ""
+  },
+  {
+   "id": 106986,
+   "title": "One-Stop Strategy",
+   "description": "Finish a World Championship race in the points after pitting [Master Difficulty]",
+   "points": 50,
+   "badge": "116889",
+   "memaddr": "P:0xH0020bd=126_0xH0020bd=0_0xH00cc20=208_0xH00ff5a<=5_0xH00cc20=56.5._R:0xH00fc0e!=d0xH00fc0e",
+   "type": ""
+  },
+  {
+   "id": 106988,
+   "title": "No Contest",
+   "description": "In the World Championship, qualify ahead of your rival and beat them in the race [Master Difficulty]",
+   "points": 5,
+   "badge": "116869",
+   "memaddr": "P:0xH0020bd=126_0xH0020bd=0_0xH00cc20=208_0xH00ff5a<0xH00ff60_R:0xH00fc0e!=d0xH00fc0e_0xH00fc1f=255_N:0xH0020bd=203_0xH00ff56<0xH00ff60.3._0xH006d2a=48_P:0xH00f522=38",
+   "type": ""
+  },
+  {
+   "id": 106989,
+   "title": "A Higher Class",
+   "description": "Beat a rival in a World Championship race who is in a higher class than you [Master Difficulty]",
+   "points": 10,
+   "badge": "117553",
+   "memaddr": "P:0xH0020bd=126_0xH0020bd=0_0xH00cc20=208_0xH00ff5a<0xH00ff60_R:0xH00fc0e!=d0xH00fc0e_0xH00fc1f=255_0xH0020bd=203.3._0xH006d2a=48_P:0xH00f522=38S0xH00c088>=12_0xH00c08a<12S0xH00c088>=8_0xH00c08a<8S0xH00c088>=4_0xH00c08a<4S0xH00c088>=1_0xH00c08a<1",
+   "type": ""
+  },
+  {
+   "id": 106987,
+   "title": "Master of the Track",
+   "description": "Finish in the points in five World Championship races [Master Difficulty]",
+   "points": 10,
+   "badge": "116879",
+   "memaddr": "P:0xH0020bd=126_N:0xH00cc20=208_N:0xH006d2a=48_M:0xH00c104>d0xH00c104.5.",
+   "type": ""
+  },
+  {
+   "id": 106990,
+   "title": "Senna Super License",
+   "description": "Win all races in the Senna GP and earn your super license",
+   "points": 25,
+   "badge": "116822",
+   "memaddr": "A:d0xM00fc14_A:d0xN00fc14_A:d0xO00fc14_0=2_A:0xM00fc14_A:0xN00fc14_A:0xO00fc14_0=0",
+   "type": "progression"
+  },
+  {
+   "id": 106994,
+   "title": "I Have to Go Now, My Planet Needs Me",
+   "description": "While in 1st, as you are crossing the finish line, run into the flag waving official [Image Training Mode]",
+   "points": 1,
+   "badge": "116824",
+   "memaddr": "P:0xH0020bd=126_0xH00fe72=1_0xH00ff5a=0_0xH00fc08=2_0xH00dbae>0",
+   "type": ""
+  },
+  {
+   "id": 106991,
+   "title": "Pedal to the Metal",
+   "description": "Win a two lap race in Italy starting from 16th, while always accelerating [Image Training Mode]",
+   "points": 10,
+   "badge": "116866",
+   "memaddr": "P:0xH0020bd=126_0xH00ff5a=15.3._R:0xH00ff09=0_R:0xH00ff09>68_0xH00fe72=1_0xH00ff5a=0_0xH00fc08=2_0xH00fc18=1_0xH00fc16=15_0xH00fc0e=11",
+   "type": ""
+  },
+  {
+   "id": 106992,
+   "title": "Defensive Driving School",
+   "description": "Win a 6 lap race in Monaco starting from pole position, without going above 5th gear [7-Speed Manual - Image Training Mode]",
+   "points": 50,
+   "badge": "116874",
+   "memaddr": "P:0xH0020bd=126_0xH0020bd=100.5._0xH00fe72=1_0xH00ff5a=0_0xH00fc08=2_0xH00fc18=5_0xH00fc16=0_0xH00ff36=2_0xH00fc0e=3_R:0xH00fe40>4",
+   "type": ""
+  },
+  {
+   "id": 106993,
+   "title": "On the Button",
+   "description": "Win a race in Canada in wet weather, starting from 7th position and using a manual transmission [Image Training Mode]",
+   "points": 10,
+   "badge": "116873",
+   "memaddr": "P:0xH0020bd=126_0xH00fe72=1_0xH00ff5a=0_0xH00fc08=2_0xH00fc16=6_0xH00fc1a=255_0xH00ff36>0_0xH00fc0e=4",
+   "type": ""
+  },
+  {
+   "id": 106995,
+   "title": "Speed Demon - USA",
+   "description": "Set a best lap time in USA that is below 41.20 seconds [Free Run Mode]",
+   "points": 5,
+   "badge": "116825",
+   "memaddr": "P:0xH0020bd=126_0xH00fe72=0_0xH00fc08=1_0xH00fc0e=0_0x 00fa26!=d0x 00fa26S0xH00fa24=0_0xH00fa27=65_0xH00fa26<32S0xH00fa27<65_0xH00fa24=0",
+   "type": ""
+  },
+  {
+   "id": 228150,
+   "title": "Speed Legend - USA",
+   "description": "Set a best lap time in USA that is below 40.89 seconds [Free Run Mode]",
+   "points": 10,
+   "badge": "253126",
+   "memaddr": "P:0xH0020bd=126_0xH00fe72=0_0xH00fc08=1_0xH00fc0e=0_0x 00fa26!=d0x 00fa26S0xH00fa24=0_0xH00fa27=64_0xH00fa26<137S0xH00fa27<64_0xH00fa24=0",
+   "type": ""
+  },
+  {
+   "id": 106996,
+   "title": "Speed Demon - Brazil",
+   "description": "Set a best lap time in Brazil that is below 47.79 seconds [Free Run Mode]",
+   "points": 5,
+   "badge": "116826",
+   "memaddr": "P:0xH0020bd=126_0xH00fe72=0_0xH00fc08=1_0xH00fc0e=1_0x 00fa42!=d0x 00fa42S0xH00fa40=0_0xH00fa43=71_0xH00fa42<121S0xH00fa43<71_0xH00fa40=0",
+   "type": ""
+  },
+  {
+   "id": 228151,
+   "title": "Speed Legend - Brazil",
+   "description": "Set a best lap time in Brazil that is below 47.10 seconds [Free Run Mode]",
+   "points": 10,
+   "badge": "253127",
+   "memaddr": "P:0xH0020bd=126_0xH00fe72=0_0xH00fc08=1_0xH00fc0e=1_0x 00fa42!=d0x 00fa42S0xH00fa40=0_0xH00fa43=71_0xH00fa42<16S0xH00fa43<71_0xH00fa40=0",
+   "type": ""
+  },
+  {
+   "id": 106997,
+   "title": "Speed Demon - San Marino",
+   "description": "Set a best lap time in San Marino that is below 41.65 seconds [Free Run Mode]",
+   "points": 5,
+   "badge": "116829",
+   "memaddr": "P:0xH0020bd=126_0xH00fe72=0_0xH00fc08=1_0xH00fc0e=2_0x 00fa5e!=d0x 00fa5eS0xH00fa5c=0_0xH00fa5f=65_0xH00fa5e<101S0xH00fa5c=0_0xH00fa5f<65",
+   "type": ""
+  },
+  {
+   "id": 228152,
+   "title": "Speed Legend - San Marino",
+   "description": "Set a best lap time in San Marino that is below 40.10 seconds [Free Run Mode]",
+   "points": 10,
+   "badge": "253128",
+   "memaddr": "P:0xH0020bd=126_0xH00fe72=0_0xH00fc08=1_0xH00fc0e=2_0x 00fa5e!=d0x 00fa5eS0xH00fa5c=0_0xH00fa5f=64_0xH00fa5e<16S0xH00fa5c=0_0xH00fa5f<64",
+   "type": ""
+  },
+  {
+   "id": 106998,
+   "title": "Speed Demon - Monaco",
+   "description": "Set a best lap time in Monaco that is below 46.10 seconds [Free Run Mode]",
+   "points": 5,
+   "badge": "116830",
+   "memaddr": "P:0xH0020bd=126_0xH00fe72=0_0xH00fc08=1_0xH00fc0e=3_0x 00fa7a!=d0x 00fa7aS0xH00fa78=0_0xH00fa7b=70_0xH00fa7a<16S0xH00fa7b<70_0xH00fa78=0",
+   "type": ""
+  },
+  {
+   "id": 228153,
+   "title": "Speed Legend - Monaco",
+   "description": "Set a best lap time in Monaco that is below 42.89 seconds [Free Run Mode]",
+   "points": 10,
+   "badge": "253129",
+   "memaddr": "P:0xH0020bd=126_0xH00fe72=0_0xH00fc08=1_0xH00fc0e=3_0x 00fa7a!=d0x 00fa7aS0xH00fa78=0_0xH00fa7b=66_0xH00fa7a<137S0xH00fa7b<66_0xH00fa78=0",
+   "type": ""
+  },
+  {
+   "id": 106999,
+   "title": "Speed Demon - Canada",
+   "description": "Set a best lap time in Canada that is below 43.70 seconds [Free Run Mode]",
+   "points": 5,
+   "badge": "116831",
+   "memaddr": "P:0xH0020bd=126_0xH00fe72=0_0xH00fc08=1_0xH00fc0e=4_0x 00fa96!=d0x 00fa96S0xH00fa94=0_0xH00fa97=67_0xH00fa96<112S0xH00fa97<67_0xH00fa94=0",
+   "type": ""
+  },
+  {
+   "id": 228154,
+   "title": "Speed Legend - Canada",
+   "description": "Set a best lap time in Canada that is below 40.60 seconds [Free Run Mode]",
+   "points": 10,
+   "badge": "253130",
+   "memaddr": "P:0xH0020bd=126_0xH00fe72=0_0xH00fc08=1_0xH00fc0e=4_0x 00fa96!=d0x 00fa96S0xH00fa94=0_0xH00fa97=64_0xH00fa96<96S0xH00fa97<64_0xH00fa94=0",
+   "type": ""
+  },
+  {
+   "id": 107000,
+   "title": "Speed Demon - Mexico",
+   "description": "Set a best lap time in Mexico that is below 38.65 seconds [Free Run Mode]",
+   "points": 5,
+   "badge": "116838",
+   "memaddr": "P:0xH0020bd=126_0xH00fe72=0_0xH00fc08=1_0xH00fc0e=5_0x 00fab2!=d0x 00fab2S0xH00fab0=0_0xH00fab3=56_0xH00fab2<101S0xH00fab3<56_0xH00fab0=0",
+   "type": ""
+  },
+  {
+   "id": 228155,
+   "title": "Speed Legend - Mexico",
+   "description": "Set a best lap time in Mexico that is below 38.40 seconds [Free Run Mode]",
+   "points": 10,
+   "badge": "253131",
+   "memaddr": "P:0xH0020bd=126_0xH00fe72=0_0xH00fc08=1_0xH00fc0e=5_0x 00fab2!=d0x 00fab2S0xH00fab0=0_0xH00fab3=56_0xH00fab2<64S0xH00fab3<56_0xH00fab0=0",
+   "type": ""
+  },
+  {
+   "id": 107001,
+   "title": "Speed Demon - France",
+   "description": "Set a best lap time in France that is below 49.84 seconds [Free Run Mode]",
+   "points": 5,
+   "badge": "116839",
+   "memaddr": "P:0xH0020bd=126_0xH00fe72=0_0xH00fc08=1_0xH00fc0e=6_0x 00face!=d0x 00faceS0xH00facc=0_0xH00facf=73_0xH00face<132S0xH00facf<73_0xH00facc=0",
+   "type": ""
+  },
+  {
+   "id": 228156,
+   "title": "Speed Legend - France",
+   "description": "Set a best lap time in France that is below 48.79 seconds [Free Run Mode]",
+   "points": 10,
+   "badge": "253132",
+   "memaddr": "P:0xH0020bd=126_0xH00fe72=0_0xH00fc08=1_0xH00fc0e=6_0x 00face!=d0x 00faceS0xH00facc=0_0xH00facf=72_0xH00face<121S0xH00facf<72_0xH00facc=0",
+   "type": ""
+  },
+  {
+   "id": 107002,
+   "title": "Speed Demon - Great Britain",
+   "description": "Set a best lap time in Great Britain that is below 44.93 seconds [Free Run Mode]",
+   "points": 5,
+   "badge": "116841",
+   "memaddr": "P:0xH0020bd=126_0xH00fe72=0_0xH00fc08=1_0xH00fc0e=7_0x 00faea!=d0x 00faeaS0xH00fae8=0_0xH00faeb=68_0xH00faea<147S0xH00faeb<68_0xH00fae8=0",
+   "type": ""
+  },
+  {
+   "id": 228157,
+   "title": "Speed Legend - Great Britain",
+   "description": "Set a best lap time in Great Britain that is below 43.24 seconds [Free Run Mode]",
+   "points": 10,
+   "badge": "253133",
+   "memaddr": "P:0xH0020bd=126_0xH00fe72=0_0xH00fc08=1_0xH00fc0e=7_0x 00faea!=d0x 00faeaS0xH00fae8=0_0xH00faeb=67_0xH00faea<36S0xH00faeb<67_0xH00fae8=0",
+   "type": ""
+  },
+  {
+   "id": 107003,
+   "title": "Speed Demon - Germany",
+   "description": "Set a best lap time in Germany that is below 44.05 seconds [Free Run Mode]",
+   "points": 5,
+   "badge": "116842",
+   "memaddr": "P:0xH0020bd=126_0xH00fe72=0_0xH00fc08=1_0xH00fc0e=8_0x 00fb06!=d0x 00fb06S0xH00fb04=0_0xH00fb07=68_0xH00fb06<5S0xH00fb07<68_0xH00fb04=0",
+   "type": ""
+  },
+  {
+   "id": 228158,
+   "title": "Speed Legend - Germany",
+   "description": "Set a best lap time in Germany that is below 43.34 seconds [Free Run Mode]",
+   "points": 10,
+   "badge": "253134",
+   "memaddr": "P:0xH0020bd=126_0xH00fe72=0_0xH00fc08=1_0xH00fc0e=8_0x 00fb06!=d0x 00fb06S0xH00fb04=0_0xH00fb07=67_0xH00fb06<52S0xH00fb07<67_0xH00fb04=0",
+   "type": ""
+  },
+  {
+   "id": 107004,
+   "title": "Speed Demon - Hungary",
+   "description": "Set a best lap time in Hungary that is below 41.45 seconds [Free Run Mode]",
+   "points": 5,
+   "badge": "116843",
+   "memaddr": "P:0xH0020bd=126_0xH00fe72=0_0xH00fc08=1_0xH00fc0e=9_0x 00fb22!=d0x 00fb22S0xH00fb20=0_0xH00fb23=65_0xH00fb22<69S0xH00fb20=0_0xH00fb23<65",
+   "type": ""
+  },
+  {
+   "id": 228159,
+   "title": "Speed Legend - Hungary",
+   "description": "Set a best lap time in Hungary that is below 38.40 seconds [Free Run Mode]",
+   "points": 10,
+   "badge": "253135",
+   "memaddr": "P:0xH0020bd=126_0xH00fe72=0_0xH00fc08=1_0xH00fc0e=9_0x 00fb22!=d0x 00fb22S0xH00fb20=0_0xH00fb23=56_0xH00fb22<64S0xH00fb20=0_0xH00fb23<56",
+   "type": ""
+  },
+  {
+   "id": 107005,
+   "title": "Speed Demon - Belgium",
+   "description": "Set a best lap time in Belgium that is below 44.93 seconds [Free Run Mode]",
+   "points": 5,
+   "badge": "116844",
+   "memaddr": "P:0xH0020bd=126_0xH00fe72=0_0xH00fc08=1_0xH00fc0e=10_0x 00fb3e!=d0x 00fb3eS0xH00fb3c=0_0xH00fb3f=68_0xH00fb3e<147S0xH00fb3f<68_0xH00fb3c=0",
+   "type": ""
+  },
+  {
+   "id": 228160,
+   "title": "Speed Legend - Belgium",
+   "description": "Set a best lap time in Belgium that is below 44.10 seconds [Free Run Mode]",
+   "points": 10,
+   "badge": "253136",
+   "memaddr": "P:0xH0020bd=126_0xH00fe72=0_0xH00fc08=1_0xH00fc0e=10_0x 00fb3e!=d0x 00fb3eS0xH00fb3c=0_0xH00fb3f=68_0xH00fb3e<16S0xH00fb3f<68_0xH00fb3c=0",
+   "type": ""
+  },
+  {
+   "id": 107006,
+   "title": "Speed Demon - Italy",
+   "description": "Set a best lap time in Italy that is below 42.84 seconds [Free Run Mode]",
+   "points": 5,
+   "badge": "116845",
+   "memaddr": "P:0xH0020bd=126_0xH00fe72=0_0xH00fc08=1_0xH00fc0e=11_0x 00fb5a!=d0x 00fb5aS0xH00fb58=0_0xH00fb5b=66_0xH00fb5a<132S0xH00fb5b<66_0xH00fb58=0",
+   "type": ""
+  },
+  {
+   "id": 228161,
+   "title": "Speed Legend - Italy",
+   "description": "Set a best lap time in Italy that is below 42.45 seconds [Free Run Mode]",
+   "points": 10,
+   "badge": "253137",
+   "memaddr": "P:0xH0020bd=126_0xH00fe72=0_0xH00fc08=1_0xH00fc0e=11_0x 00fb5a!=d0x 00fb5aS0xH00fb58=0_0xH00fb5b=66_0xH00fb5a<69S0xH00fb5b<66_0xH00fb58=0",
+   "type": ""
+  },
+  {
+   "id": 107007,
+   "title": "Speed Demon - Portugal",
+   "description": "Set a best lap time in Portugal that is below 43.20 seconds [Free Run Mode]",
+   "points": 5,
+   "badge": "116846",
+   "memaddr": "P:0xH0020bd=126_0xH00fe72=0_0xH00fc08=1_0xH00fc0e=12_0x 00fb76!=d0x 00fb76S0xH00fb74=0_0xH00fb77=67_0xH00fb76<32S0xH00fb77<67_0xH00fb74=0",
+   "type": ""
+  },
+  {
+   "id": 228162,
+   "title": "Speed Legend - Portugal",
+   "description": "Set a best lap time in Portugal that is below 39.55 seconds [Free Run Mode]",
+   "points": 10,
+   "badge": "253138",
+   "memaddr": "P:0xH0020bd=126_0xH00fe72=0_0xH00fc08=1_0xH00fc0e=12_0x 00fb76!=d0x 00fb76S0xH00fb74=0_0xH00fb77=57_0xH00fb76<85S0xH00fb77<57_0xH00fb74=0",
+   "type": ""
+  },
+  {
+   "id": 107008,
+   "title": "Speed Demon - Spain",
+   "description": "Set a best lap time in Spain that is below 47.99 seconds [Free Run Mode]",
+   "points": 5,
+   "badge": "116847",
+   "memaddr": "P:0xH0020bd=126_0xH00fe72=0_0xH00fc08=1_0xH00fc0e=13_0x 00fb92!=d0x 00fb92S0xH00fb90=0_0xH00fb93=71_0xH00fb92<153S0xH00fb93<71_0xH00fb90=0",
+   "type": ""
+  },
+  {
+   "id": 228163,
+   "title": "Speed Legend - Spain",
+   "description": "Set a best lap time in Spain that is below 45.75 seconds [Free Run Mode]",
+   "points": 10,
+   "badge": "253139",
+   "memaddr": "P:0xH0020bd=126_0xH00fe72=0_0xH00fc08=1_0xH00fc0e=13_0x 00fb92!=d0x 00fb92S0xH00fb90=0_0xH00fb93=69_0xH00fb92<117S0xH00fb93<69_0xH00fb90=0",
+   "type": ""
+  },
+  {
+   "id": 107009,
+   "title": "Speed Demon - Japan",
+   "description": "Set a best lap time in Japan that is below 45.60 seconds [Free Run Mode]",
+   "points": 5,
+   "badge": "116848",
+   "memaddr": "P:0xH0020bd=126_0xH00fe72=0_0xH00fc08=1_0xH00fc0e=14_0x 00fbae!=d0x 00fbaeS0xH00fbac=0_0xH00fbaf=69_0xH00fbae<96S0xH00fbaf<69_0xH00fbac=0",
+   "type": ""
+  },
+  {
+   "id": 228164,
+   "title": "Speed Legend - Japan",
+   "description": "Set a best lap time in Japan that is below 43.60 seconds [Free Run Mode]",
+   "points": 10,
+   "badge": "253140",
+   "memaddr": "P:0xH0020bd=126_0xH00fe72=0_0xH00fc08=1_0xH00fc0e=14_0x 00fbae!=d0x 00fbaeS0xH00fbac=0_0xH00fbaf=67_0xH00fbae<96S0xH00fbaf<67_0xH00fbac=0",
+   "type": ""
+  },
+  {
+   "id": 107010,
+   "title": "Speed Demon - Australia",
+   "description": "Set a best lap time in Australia that is below 36.55 seconds [Free Run Mode]",
+   "points": 5,
+   "badge": "116849",
+   "memaddr": "P:0xH0020bd=126_0xH00fe72=0_0xH00fc08=1_0xH00fc0e=15_0x 00fbca!=d0x 00fbcaS0xH00fbc8=0_0xH00fbcb=54_0xH00fbca<85S0xH00fbcb<54_0xH00fbc8=0",
+   "type": ""
+  },
+  {
+   "id": 228165,
+   "title": "Speed Legend - Australia",
+   "description": "Set a best lap time in Australia that is below 36.15 seconds [Free Run Mode]",
+   "points": 10,
+   "badge": "253141",
+   "memaddr": "P:0xH0020bd=126_0xH00fe72=0_0xH00fc08=1_0xH00fc0e=15_0x 00fbca!=d0x 00fbcaS0xH00fbc8=0_0xH00fbcb=54_0xH00fbca<21S0xH00fbcb<54_0xH00fbc8=0",
+   "type": ""
+  }
+ ]
+}

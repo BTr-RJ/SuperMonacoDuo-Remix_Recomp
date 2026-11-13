@@ -1,10 +1,10 @@
 # Super Monaco Duo-Remix Recomp
 
 A native Windows x64 fan project for **Super Monaco GP** (Mega Drive / Genesis, 1990)
-and **Ayrton Senna's Super Monaco GP II** (1992). Version **0.50** is the first
-public test: continuous zoom with arcade version sound effects and art, team
-colours, analog steering and a victory theme in GP II. The English installer
-builds both games locally from your own ROMs.
+and **Ayrton Senna's Super Monaco GP II** (1992). Version **0.60** (Public Test) brings continuous zoom with arcade version sound
+effects and art, team colours, analog steering, a victory theme in GP II and, new
+in this version, **offline RetroAchievements-set achievements** inside both games.
+The English installer builds both games locally from your own ROMs.
 
 [![Get it on RecompLauncher](https://recomplauncher.com/assets/press/launcher/badge-dark.svg)](https://recomplauncher.com/)
 
@@ -19,13 +19,13 @@ the release of current and future projects.
 
 ## Install and play
 
-**[Download version 0.50](https://github.com/BTr-RJ/SuperMonacoDuo-Remix_Recomp/releases/tag/v0.50)**
+**[Download version 0.60](https://github.com/BTr-RJ/SuperMonacoDuo-Remix_Recomp/releases/tag/v0.60)**
 (Public Test, Windows x64):
 
-- [Installer package](https://github.com/BTr-RJ/SuperMonacoDuo-Remix_Recomp/releases/download/v0.50/SuperMonacoDuoRecomp-0.50-Windows-x64.zip)
-- [SHA-256 checksums](https://github.com/BTr-RJ/SuperMonacoDuo-Remix_Recomp/releases/download/v0.50/SHA256SUMS.txt)
+- [Installer package](https://github.com/BTr-RJ/SuperMonacoDuo-Remix_Recomp/releases/download/v0.60/SuperMonacoDuoRecomp-0.60-Windows-x64.zip)
+- [SHA-256 checksums](https://github.com/BTr-RJ/SuperMonacoDuo-Remix_Recomp/releases/download/v0.60/SHA256SUMS.txt)
 
-1. Extract the complete **SuperMonacoDuoRecomp-0.50-Windows-x64.zip** package.
+1. Extract the complete **SuperMonacoDuoRecomp-0.60-Windows-x64.zip** package.
 2. Open **SuperMonacoDuoRecomp.exe** and choose **Install games**.
 3. Select your ROM folder(s) and an empty installation folder.
 4. Let the installer verify your files and compile both games locally.
@@ -41,13 +41,12 @@ The package contains no ROMs and no generated game code. Microsoft C++ tools
 (Visual Studio 2022 Build Tools) are required; the installer offers the official
 signed Microsoft installer if they are missing, with administrator consent.
 
-**RecompLauncher:** releases after 0.50 include a `recomplauncher.json`, so the games can be set up and started from [RecompLauncher](https://recomplauncher.com/) too (it asks for the folder with your ROMs and builds both games locally; the Microsoft C++ tools must already be installed).
-ecomplauncher.json, so the games can be set up and started from [RecompLauncher](https://recomplauncher.com/) too (it asks for the folder with your ROMs and builds both games locally; the Microsoft C++ tools must already be installed).
+**RecompLauncher:** releases from 0.60 on include a `recomplauncher.json`, so the games can be set up and started from [RecompLauncher](https://recomplauncher.com/) too (it asks for the folder with your ROMs and builds both games locally; the Microsoft C++ tools must already be installed).
 
 See [installation and updates](docs/INSTALLATION.md), [controls](docs/CONTROLS.md)
 and [building from source](docs/BUILDING.md).
 
-## Original Mega Drive vs Duo-Remix (0.50)
+## Original Mega Drive vs Duo-Remix (captured with 0.50)
 
 Each GIF shows the **same replay and the same captured frames** side by side:
 **original Mega Drive rendering on the left**, **this version on the right**.
@@ -66,7 +65,24 @@ Captured from a QA replay of controller input on the first track of each game, n
 played campaign. The GIFs are 5 seconds at 50 fps (the fastest rate browsers play reliably;
 the source is 59.94 Hz) with 128-colour palettes, so some edge colours are approximated. [Capture details and hashes](docs/media/0.50/comparison.json).
 
-## What's new in 0.50
+## What's new in 0.60
+
+- **Offline achievements, from the RetroAchievements sets.** Both games carry the
+  official core achievement sets from [RetroAchievements.org](https://retroachievements.org/)
+  (Super Monaco GP: 29 achievements, 320 points; Ayrton Senna's Super Monaco GP II:
+  53 achievements, 585 points) with their original trigger logic, evaluated by the
+  open-source [rcheevos](https://github.com/RetroAchievements/rcheevos) library on the
+  game's RAM. A toast appears when one unlocks and **F6** opens the list (Up/Down, PgUp/PgDn
+  to browse). Progress is saved in `.local/achievements` on your PC. There is no
+  account, no network access and nothing is reported to retroachievements.org, so
+  these unlocks do not count on the site. Leaderboards and rich presence are not included.
+- **Game Over and Retire hand-off.** The continuous zoom now takes over exactly where
+  the cartridge's own letter animation ends: it starts at the native letter size and
+  position and grows from there, instead of restarting small.
+- **RecompLauncher support.** The package includes `recomplauncher.json`, so the games
+  can be set up and started from RecompLauncher.
+
+## What was in 0.50
 
 - **Continuous zoom with arcade version sound effects and art.** Cars, signs, tyres, trees, arches and
   tunnel structures grow smoothly instead of switching sprite sizes. Engines,
@@ -92,7 +108,7 @@ the source is 59.94 Hz) with 128-colour palettes, so some edge colours are appro
 - **Smoother approach, tunnels and arches.** Many rounds of fixes for scenery and
   car approach, curves, tunnel entrance/exit (both games), arches and portals,
   the 16:9 side margins and the lateral camera of GP II. Details in
-  [the release notes](docs/RELEASE-0.50.md).
+  [the 0.50 release notes](docs/RELEASE-0.50.md) and [0.60 release notes](docs/RELEASE-0.60.md).
 - **Widescreen.** 4:3, 16:9, 21:9 and 32:9 add side scenery in races; output
   from 960×540 to 3840×2160, windowed or fullscreen.
 - **CRT presets.** Pixel-perfect, linear, koko-aio (Balanced, Ambilight, Classic),
@@ -123,6 +139,11 @@ issues are known:
   tracks may use sign and tyre objects that still show the cartridge art.
 - Pulse pedals and right-stick pedals were verified with QA inputs only; they have
   not been tested with every physical controller yet.
+- Achievements: the trigger logic is the official RetroAchievements one, but it was
+  verified with scripted RAM tests (a trigger fired, saved and reloaded), not by playing
+  every achievement. Some sets rely on exact emulator behaviour and may need more testing.
+- Game Over and Retire were checked on QA fixtures; the full in-game Retire flow has not
+  been recorded frame by frame.
 
 The games run as a **hybrid recompilation** (translated 68000 code with an
 interpreter fallback, Z80 interpreted). It is not a complete static recompilation,
@@ -139,6 +160,8 @@ in this repository; the installer package carries the packs (see below).
 |---|---|
 | src/launcher | Native English launcher, controls editor, installer and updater UI |
 | src/game | Per-game adapters, input and controls |
+| src/achievements | Offline achievement engine (rcheevos) and F6 panel |
+| src/third_party | rcheevos runtime (MIT) |
 | src/presentation | Zoom, scene capture, tunnels, team colours and GPU/CRT output |
 | src/audio | Arcade sound board, effects and victory theme |
 | games | Exact revision hashes and public metadata |
@@ -165,4 +188,7 @@ This independent fan project is not an official Sega product. The original games
 and artwork belong to Sega and their respective rights holders. See
 [credits](CREDITS.md) and [third-party terms](THIRD_PARTY_NOTICES.md). The
 GenesisRecomp runtime is PolyForm Noncommercial 1.0.0; other components retain
-their own licenses. Public visibility does not imply commercial-use rights.
+their own licenses. Achievement titles, descriptions and logic come from
+[RetroAchievements.org](https://retroachievements.org/) and belong to their authors;
+this project is not affiliated with RetroAchievements. Public visibility does not imply
+commercial-use rights.

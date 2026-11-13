@@ -11,7 +11,7 @@
 #include <thread>
 #include <algorithm>
 #ifndef SMGP_VERSION
-#define SMGP_VERSION "0.50"
+#define SMGP_VERSION "0.60"
 #endif
 namespace {
 HINSTANCE app;HFONT font;HBRUSH brush;HWND panel,owner,destination,logbox,progress,status,install_button,close_button;

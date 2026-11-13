@@ -13,7 +13,7 @@ holders. No ROM is included; you provide your own dumps.
 | ymfm (YM2151 / OPM) | BSD 3-Clause | [docs/licenses/ymfm.txt](docs/licenses/ymfm.txt), commit `17decfae857b92ab55fbb30ade2287ace095a381` |
 | superzazu/z80 | MIT | [docs/licenses/superzazu-z80.txt](docs/licenses/superzazu-z80.txt) |
 | clowncommon | ISC | [docs/licenses/clowncommon.txt](docs/licenses/clowncommon.txt) |
-| rcheevos | MIT | [docs/licenses/rcheevos.txt](docs/licenses/rcheevos.txt) (SDK copy) |
+| rcheevos | MIT | [docs/licenses/rcheevos.txt](docs/licenses/rcheevos.txt); trigger runtime vendored in `src/third_party/rcheevos` @ `eea6461f172d37d36b0d56568f13a505e0a9fd86` |
 | librashader 0.12.0 | MPL 2.0 | [docs/licenses/librashader.md](docs/licenses/librashader.md) |
 | koko-aio shaders (`kokoko3k/koko-aio-slang` @ `64f3d8338ccaf3bc4024ad01f0e6da4a10da418b`) | per-file notices | preserved in `assets/shaders/koko-aio` |
 | Microsoft D3DX libraries | Microsoft SDK terms | [docs/licenses/Microsoft-D3DX.txt](docs/licenses/Microsoft-D3DX.txt) |
@@ -22,6 +22,18 @@ holders. No ROM is included; you provide your own dumps.
 
 The runtime integration is reproducible through `tools/patch_runtime.py`.
 Public visibility does not imply commercial-use rights.
+
+## RetroAchievements set data
+
+`assets/achievements/smgp1.json` (RetroAchievements game 111, Super Monaco GP) and
+`smgp2.json` (game 103, Ayrton Senna's Super Monaco GP II) hold the core achievement
+sets published by [RetroAchievements.org](https://retroachievements.org/): titles,
+descriptions, point values and the original trigger (MemAddr) logic, converted by
+`tools/import_ra_patch.py` without any account data. The sets were written by the
+RetroAchievements community and remain theirs; the data is used here for local, offline
+tracking only and is neither uploaded nor reported to the service. This project is not
+affiliated with or endorsed by RetroAchievements. The ROM hashes used by the sets match
+the two qualified dumps. If the maintainers of the sets ask for removal, the files will be removed.
 
 ## Arcade-derived data (release package only)
 

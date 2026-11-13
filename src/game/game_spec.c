@@ -5,6 +5,8 @@
 #include "scene.h"
 #include "controls.h"
 #include "sound.h"
+#include "achievements.h"
+#include "input_script.h"
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -16,7 +18,8 @@
 
 static uint64_t irq_epoch;
 static int racing,margin;
-int rr_game_key(int key) { (void)key; return 0; }
+static int ach_started;
+int rr_game_key(int key) { return smgp_ach_key(key); } /* F6: offline achievements panel */
 static void entry(void) { recomp_call_addr(GAME_ENTRY); }
 /* These games install self-modifying HBlank handlers in RAM. Execute their
    live IRQ bodies until every copied-code path has a qualified translation. */
@@ -106,6 +109,7 @@ static int video_enabled(void){return 0;}
 static int video_width(int a,int b,int c,int d){return 0;}
 static void overlay(const struct GVDP *v,int line,uint32_t *out,int width){
     smgp_scene_formation_overlay(line,out,width);
+    smgp_ach_overlay(line,out,width);
     int native=gvdp_screen_width(v),offset=(width-native)/2;
     if(racing&&line<65){
 #if GAME_smgp2
@@ -121,6 +125,8 @@ static void overlay(const struct GVDP *v,int line,uint32_t *out,int width){
 static const GameVideo video={.configure=video_config,.enabled=video_enabled,.width=video_width,.overlay_scanline=overlay};
 static void frame_post(uint64_t frame) {
     smgp_scene_diagnostics();
+    if(!ach_started){ach_started=1;smgp_ach_init(GAME_SHORT,!input_script_active());}
+    smgp_ach_frame(g_ram);
     if(getenv("SMGP_SOUND_TRACE")&&frame%60==0){
       fprintf(stderr,"[SMGP SOUND] frame=%llu zpc=%04X iff=%d halt=%d irq=%d request=%d reset_off=%d bank=%06X driver=",
        (unsigned long long)frame,g_machine.z80.pc,g_machine.z80.iff1,g_machine.z80.halted,g_machine.z80.int_pending,g_machine.bus.z80_busreq,g_machine.bus.z80_reset_off,g_machine.bus.z80_bank);

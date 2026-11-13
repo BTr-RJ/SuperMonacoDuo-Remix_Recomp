@@ -1,0 +1,270 @@
+{
+ "game": "smgp1",
+ "ra_game_id": 111,
+ "ra_title": "Super Monaco GP",
+ "source": "RetroAchievements.org core set (official achievement logic)",
+ "total_points": 320,
+ "achievements": [
+  {
+   "id": 1062,
+   "title": "San Marino GP",
+   "description": "Finish first on the 1st round of the World Championship",
+   "points": 5,
+   "badge": "21740",
+   "memaddr": "0xH009142=1_0xH009144=0_0xH00ff34=0_d0xH009232=4_0xH009232=5_P:0xH00ff1c!=0",
+   "type": ""
+  },
+  {
+   "id": 21852,
+   "title": "Brazil GP",
+   "description": "Finish first on the 2nd round of the World Championship",
+   "points": 10,
+   "badge": "21741",
+   "memaddr": "0xH009142=1_0xH009144=1_0xH00ff34=0_d0xH009232=4_0xH009232=5_P:0xH00ff1c!=0",
+   "type": ""
+  },
+  {
+   "id": 21853,
+   "title": "France GP",
+   "description": "Finish first on the 3rd round of the World Championship",
+   "points": 5,
+   "badge": "21742",
+   "memaddr": "0xH009142=1_0xH009144=2_0xH00ff34=0_d0xH009232=4_0xH009232=5_P:0xH00ff1c!=0",
+   "type": ""
+  },
+  {
+   "id": 21854,
+   "title": "Hungary GP",
+   "description": "Finish first on the 4th round of the World Championship",
+   "points": 5,
+   "badge": "21744",
+   "memaddr": "0xH009142=1_0xH009144=3_0xH00ff34=0_d0xH009232=4_0xH009232=5_P:0xH00ff1c!=0",
+   "type": ""
+  },
+  {
+   "id": 21855,
+   "title": "West Germany GP",
+   "description": "Finish first on the 5th round of the World Championship",
+   "points": 5,
+   "badge": "21743",
+   "memaddr": "0xH009142=1_0xH009144=4_0xH00ff34=0_d0xH009232=4_0xH009232=5_P:0xH00ff1c!=0",
+   "type": ""
+  },
+  {
+   "id": 21856,
+   "title": "U.S.A GP",
+   "description": "Finish first on the 6th round of the World Championship",
+   "points": 5,
+   "badge": "21745",
+   "memaddr": "0xH009142=1_0xH009144=5_0xH00ff34=0_d0xH009232=4_0xH009232=5_P:0xH00ff1c!=0",
+   "type": ""
+  },
+  {
+   "id": 21857,
+   "title": "Canada GP",
+   "description": "Finish first on the 7th round of the World Championship",
+   "points": 5,
+   "badge": "21746",
+   "memaddr": "0xH009142=1_0xH009144=6_0xH00ff34=0_d0xH009232=4_0xH009232=5_P:0xH00ff1c!=0",
+   "type": ""
+  },
+  {
+   "id": 21858,
+   "title": "Great Britain GP",
+   "description": "Finish first on the 8th round of the World Championship",
+   "points": 5,
+   "badge": "21747",
+   "memaddr": "0xH009142=1_0xH009144=7_0xH00ff34=0_d0xH009232=4_0xH009232=5_P:0xH00ff1c!=0",
+   "type": ""
+  },
+  {
+   "id": 21859,
+   "title": "Italy GP",
+   "description": "Finish first on the 9th round of the World Championship",
+   "points": 5,
+   "badge": "21748",
+   "memaddr": "0xH009142=1_0xH009144=8_0xH00ff34=0_d0xH009232=4_0xH009232=5_P:0xH00ff1c!=0",
+   "type": ""
+  },
+  {
+   "id": 21860,
+   "title": "Portugal GP",
+   "description": "Finish first on the 10th round of the World Championship",
+   "points": 5,
+   "badge": "21749",
+   "memaddr": "0xH009142=1_0xH009144=9_0xH00ff34=0_d0xH009232=4_0xH009232=5_P:0xH00ff1c!=0",
+   "type": ""
+  },
+  {
+   "id": 21861,
+   "title": "Spain GP",
+   "description": "Finish first on the 11th round of the World Championship",
+   "points": 5,
+   "badge": "21750",
+   "memaddr": "0xH009142=1_0xH009144=10_0xH00ff34=0_d0xH009232=4_0xH009232=5_P:0xH00ff1c!=0",
+   "type": ""
+  },
+  {
+   "id": 21862,
+   "title": "Mexico GP",
+   "description": "Finish first on the 12th round of the World Championship",
+   "points": 5,
+   "badge": "21751",
+   "memaddr": "0xH009142=1_0xH009144=11_0xH00ff34=0_d0xH009232=4_0xH009232=5_P:0xH00ff1c!=0",
+   "type": ""
+  },
+  {
+   "id": 21863,
+   "title": "Japan GP",
+   "description": "Finish first on the 13th round of the World Championship",
+   "points": 5,
+   "badge": "21752",
+   "memaddr": "0xH009142=1_0xH009144=12_0xH00ff34=0_d0xH009232=4_0xH009232=5_P:0xH00ff1c!=0",
+   "type": ""
+  },
+  {
+   "id": 21864,
+   "title": "Belgium GP",
+   "description": "Finish first on the 14th round of the World Championship",
+   "points": 5,
+   "badge": "21753",
+   "memaddr": "0xH009142=1_0xH009144=13_0xH00ff34=0_d0xH009232=4_0xH009232=5_P:0xH00ff1c!=0",
+   "type": ""
+  },
+  {
+   "id": 21865,
+   "title": "Australia GP",
+   "description": "Finish first on the 15th round of the World Championship",
+   "points": 5,
+   "badge": "21754",
+   "memaddr": "0xH009142=1_0xH009144=14_0xH00ff34=0_d0xH009232=4_0xH009232=5_P:0xH00ff1c!=0",
+   "type": ""
+  },
+  {
+   "id": 21866,
+   "title": "Monaco GP",
+   "description": "Finish first on the 16th round of the World Championship",
+   "points": 10,
+   "badge": "21755",
+   "memaddr": "0xH009142=1_0xH009144=15_0xH00ff34=0_d0xH009232=4_0xH009232=5_P:0xH00ff1c!=0",
+   "type": ""
+  },
+  {
+   "id": 22044,
+   "title": "Pole Position - Super Monaco GP",
+   "description": "Finish the Preliminary race in 1st place to start on the lead",
+   "points": 10,
+   "badge": "21830",
+   "memaddr": "0xH009142=0_0xH009232=1_0xH00ff30=0_N:d0xH00ff12=96_0xH00ff12=98.1._R:0xH00ff12=122_P:0xH00ff1c!=0",
+   "type": ""
+  },
+  {
+   "id": 22045,
+   "title": "Nice Drivin'",
+   "description": "Win the 1st race on Super Monaco GP",
+   "points": 10,
+   "badge": "21836",
+   "memaddr": "N:0xH00ff34=0_N:0xH009142=1_N:d0xH009232=2_0xH009232=3.1._0xH009142=2_R:0xH009144!=0_R:0xH00ff12=122_P:0xH00ff1c!=0",
+   "type": "progression"
+  },
+  {
+   "id": 22046,
+   "title": "Now It's Up To You",
+   "description": "Win the 2nd race on Super Monaco GP",
+   "points": 10,
+   "badge": "21837",
+   "memaddr": "N:0xH00ff34=0_N:0xH009142=2_N:d0xH009232=2_0xH009232=3.1._R:0xH009144!=0_R:0xH00ff12=122_P:0xH00ff1c!=0",
+   "type": "progression"
+  },
+  {
+   "id": 22043,
+   "title": "Pole Position - World Championship",
+   "description": "Finish the Preliminary race in 1st place to start on the lead",
+   "points": 5,
+   "badge": "21824",
+   "memaddr": "0xH009142=0_0xH009232=1_0xH00ff30=0_Z:0xH00ff12=122_N:d0xH00ff12=96_P:0xH00ff12=98.1._P:0xH00ff1c!=0_P:0xH00914a=1",
+   "type": ""
+  },
+  {
+   "id": 22049,
+   "title": "Contentment",
+   "description": "Nobody in your front during a race on Minarae Team",
+   "points": 10,
+   "badge": "21932",
+   "memaddr": "0xL009042=11_0xH00ff12=122.1._0xH00ff30=0.1._0xH009232=0.1._T:0xH009232=1.1._T:0xH009232=2.1._T:0xH009232=3.1._T:0xH009232=4.1._T:d0xH009232=5_T:0xH009144>d0xH009144_R:0xH00ff34>d0xH00ff34_P:0xH009142=2_P:0xH00ff1c!=0",
+   "type": ""
+  },
+  {
+   "id": 22047,
+   "title": "Don't Take Advantage Of Me!",
+   "description": "Defeat A.Asselin in San Marino and Brazil on Minarae Team",
+   "points": 25,
+   "badge": "21839",
+   "memaddr": "N:0xH009142=1_N:0xL009042=11_N:0xL009043=0_N:0xH009144=0_N:0xH00ff34<0xH00ff3a_N:d0xH009232=4_0xH009232=5.1._N:0xH009142=1_N:0xL009042=11_N:0xL009043=0_N:0xH009144=1_N:0xH00ff34<0xH00ff3a_N:d0xH009232=4_T:0xH009232=5.1._R:0xH009144>1_P:0xH00ff1c!=0",
+   "type": ""
+  },
+  {
+   "id": 22048,
+   "title": "Super A Class Mode",
+   "description": "Become the World Champion on 1st season on a single session",
+   "points": 25,
+   "badge": "21843",
+   "memaddr": "N:0xU009042=1_0xH009144=0.1._0xH009144=1.1._T:0xH009144=2.1._T:0xH009144=3.1._T:0xH009144=4.1._T:0xH009144=5.1._T:0xH009144=6.1._T:0xH009144=7.1._T:0xH009144=8.1._T:0xH009144=9.1._T:0xH009144=10.1._T:0xH009144=11.1._T:0xH009144=12.1._T:0xH009144=13.1._T:0xH009144=14.1._T:0xH009144=15.1._T:0xH009144=16_T:0xU009042=5_R:0xH009144<d0xH009144_P:0xH00ff1c!=0",
+   "type": "progression"
+  },
+  {
+   "id": 22050,
+   "title": "Let's Try Hard To Win",
+   "description": "Become the World Champion only on Minarae team on a single session",
+   "points": 25,
+   "badge": "21933",
+   "memaddr": "T:d0xH00903a>d0xH009030_T:d0xH00903a>d0xH009031_T:d0xH00903a>d0xH009032_T:d0xH00903a>d0xH009033_T:d0xH00903a>d0xH009034_T:d0xH00903a>d0xH009035_T:d0xH00903a>d0xH009036_T:d0xH00903a>d0xH009037_T:d0xH00903a>d0xH009038_T:d0xH00903a>d0xH009039_T:d0xH00903a>d0xH00903b_T:d0xH00903a>d0xH00903c_T:d0xH00903a>d0xH00903d_T:d0xH00903a>d0xH00903e_T:d0xH00903a>d0xH00903f_d0xL009042=11_0xH009144=0.1._T:0xH009144=1.1._T:0xH009144=2.1._T:0xH009144=3.1._T:0xH009144=4.1._T:0xH009144=5.1._T:0xH009144=6.1._T:0xH009144=7.1._T:0xH009144=8.1._T:0xH009144=9.1._T:0xH009144=10.1._T:0xH009144=11.1._T:0xH009144=12.1._T:0xH009144=13.1._T:0xH009144=14.1._T:0xH009144=15.1._T:0xH009144=16_T:0xH009042=80_R:0xH009144<d0xH009144_P:0xH00ff1c!=0",
+   "type": ""
+  },
+  {
+   "id": 22041,
+   "title": "Perfect World Champion",
+   "description": "Win all races from a season on a single session",
+   "points": 50,
+   "badge": "21758",
+   "memaddr": "N:0xH009142=1_N:0xH009144=0_N:0xH00ff34=0_N:d0xH009232=4_0xH009232=5.1._N:0xH009142=1_N:0xH009144=1_N:0xH00ff34=0_N:d0xH009232=4_0xH009232=5.1._N:0xH009142=1_N:0xH009144=2_N:0xH00ff34=0_N:d0xH009232=4_0xH009232=5.1._N:0xH009142=1_N:0xH009144=3_N:0xH00ff34=0_N:d0xH009232=4_0xH009232=5.1._N:0xH009142=1_N:0xH009144=4_N:0xH00ff34=0_N:d0xH009232=4_0xH009232=5.1._N:0xH009142=1_N:0xH009144=5_N:0xH00ff34=0_N:d0xH009232=4_0xH009232=5.1._N:0xH009142=1_N:0xH009144=6_N:0xH00ff34=0_N:d0xH009232=4_0xH009232=5.1._N:0xH009142=1_N:0xH009144=7_N:0xH00ff34=0_N:d0xH009232=4_0xH009232=5.1._N:0xH009142=1_N:0xH009144=8_N:0xH00ff34=0_N:d0xH009232=4_0xH009232=5.1._N:0xH009142=1_N:0xH009144=9_N:0xH00ff34=0_N:d0xH009232=4_0xH009232=5.1._N:0xH009142=1_N:0xH009144=10_N:0xH00ff34=0_N:d0xH009232=4_0xH009232=5.1._N:0xH009142=1_N:0xH009144=11_N:0xH00ff34=0_N:d0xH009232=4_0xH009232=5.1._N:0xH009142=1_N:0xH009144=12_N:0xH00ff34=0_N:d0xH009232=4_0xH009232=5.1._N:0xH009142=1_N:0xH009144=13_N:0xH00ff34=0_N:d0xH009232=4_0xH009232=5.1._N:0xH009142=1_N:0xH009144=14_N:0xH00ff34=0_N:d0xH009232=4_0xH009232=5.1._N:0xH009142=1_N:0xH009144=15_N:0xH00ff34=0_N:d0xH009232=4_0xH009232=5.1._R:0xH009144<d0xH009144_P:0xH00ff1c!=0",
+   "type": ""
+  },
+  {
+   "id": 22042,
+   "title": "Your Days Are Gone!",
+   "description": "Defeat G.Ceara in San Marino and Brazil",
+   "points": 25,
+   "badge": "21760",
+   "memaddr": "N:0xH009142=1_N:0xU009042=6_N:0xH009144=0_N:0xH00ff34<0xH00ff3a_N:d0xH009232=4_0xH009232=5.1._N:0xH009142=1_N:0xU009042=6_N:0xH009144=1_N:0xH00ff34<0xH00ff3a_N:d0xH009232=4_T:0xH009232=5.1._R:0xH009144>1_P:0xH00ff1c!=0",
+   "type": ""
+  },
+  {
+   "id": 22052,
+   "title": "Congratulations",
+   "description": "Reach the True Ending by winning the 2nd season on a single session",
+   "points": 25,
+   "badge": "21977",
+   "memaddr": "N:0xU009042=6_0xH009144=0.1._0xH009144=1.1._T:0xH009144=2.1._T:0xH009144=3.1._T:0xH009144=4.1._T:0xH009144=5.1._T:0xH009144=6.1._T:0xH009144=7.1._T:0xH009144=8.1._T:0xH009144=9.1._T:0xH009144=10.1._T:0xH009144=11.1._T:0xH009144=12.1._T:0xH009144=13.1._T:0xH009144=14.1._T:0xH009144=15.1._T:0xH009144=16_T:0xU009042=5_R:0xH009144<d0xH009144_P:0xH00ff1c!=0",
+   "type": "progression"
+  },
+  {
+   "id": 22053,
+   "title": "Head As A Trophy",
+   "description": "Celebrate your win in a... unique way",
+   "points": 5,
+   "badge": "21978",
+   "memaddr": "O:0xH00ff12=48_0xH00ff12=152_0xH00fc30=76_P:0xH00ff1c!=0",
+   "type": ""
+  },
+  {
+   "id": 22051,
+   "title": "Above Maximum Speed",
+   "description": "Reach 440 kmh",
+   "points": 5,
+   "badge": "21934",
+   "memaddr": "0x 00ae26>439_P:0xH00ff1c!=0",
+   "type": ""
+  }
+ ]
+}

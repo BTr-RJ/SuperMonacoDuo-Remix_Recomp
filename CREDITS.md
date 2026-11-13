@@ -12,6 +12,9 @@
   [BTr-RJ/RedBaron_Recomp](https://github.com/BTr-RJ/RedBaron_Recomp).
 - **Victory theme (GP II):** *Tema da Vitória (Sega Genesis remake)* by **Edu Moonwalker**,
   <https://www.youtube.com/watch?v=Ho3owgC7jMI>; the first 7 seconds of silence are removed.
+- **Achievements:** the community authors of the Super Monaco GP and Super Monaco GP II
+  sets on [RetroAchievements.org](https://retroachievements.org/) and the
+  [rcheevos](https://github.com/RetroAchievements/rcheevos) library (MIT). Not affiliated.
 - **Classic cover sources:** libretro-thumbnails / Sega_-_Mega_Drive_-_Genesis.
 - **Barlow and Barlow Condensed:** Jeremy Tribby and contributors, SIL OFL 1.1.
 - **Launcher masthead:** composed from this project's own gameplay captures. The

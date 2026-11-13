@@ -7,7 +7,7 @@ param(
 $ErrorActionPreference='Stop'
 [Console]::OutputEncoding=New-Object Text.UTF8Encoding($false)
 $OutputEncoding=[Console]::OutputEncoding
-$version='0.50'
+$version='0.60'
 $packageRoot=Split-Path -Parent $PSScriptRoot
 $installRoot=[IO.Path]::GetFullPath($Destination)
 $sourceRoot=[IO.Path]::GetFullPath($packageRoot)

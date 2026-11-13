@@ -27,7 +27,7 @@
 namespace fs=std::filesystem;
 using namespace Gdiplus;
 #ifndef SMGP_VERSION
-#define SMGP_VERSION "0.50"
+#define SMGP_VERSION "0.60"
 #endif
 #define WIDEN2(x) L##x
 #define WIDEN(x) WIDEN2(x)
