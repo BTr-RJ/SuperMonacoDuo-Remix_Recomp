@@ -1,0 +1,16 @@
+{
+  "smgp1": {
+    "title": "Super Monaco GP (World)",
+    "header_title": "Super Monaco GP",
+    "sha256": "9046c9d67f15ab0f68d9e73b0cc516b6fd1637a8db0da4a03dcff8933c12dfa1",
+    "crc32": "B1823595",
+    "size": 524288
+  },
+  "smgp2": {
+    "title": "Ayrton Senna's Super Monaco GP II (USA)",
+    "header_title": "Ayrton Senna's  Super Monaco GP II",
+    "sha256": "c02206602e00dd8e9b6c38943b8a3be41e37d2d21c1768cf342900bce11ab4f0",
+    "crc32": "EAC8DED6",
+    "size": 1048576
+  }
+}

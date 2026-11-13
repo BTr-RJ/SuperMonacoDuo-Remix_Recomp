@@ -1,0 +1,31 @@
+name: Bug report
+description: Report an installation, input, graphics or audio issue
+body:
+  - type: markdown
+    attributes:
+      value: Do not attach ROMs, generated game code, saves or account tokens. Review logs for private paths.
+  - type: input
+    id: version
+    attributes:
+      label: Launcher version and Windows version
+    validations:
+      required: true
+  - type: dropdown
+    id: game
+    attributes:
+      label: Game
+      options:
+        - Super Monaco GP (World)
+        - Ayrton Senna's Super Monaco GP II (USA)
+        - Installer / launcher
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps and expected / actual behavior
+      description: Track, settings (aspect, filter, continuous zoom), and the time in a recording if you have one.
+    validations:
+      required: true
+  - type: textarea
+    id: system
+    attributes:
+      label: GPU, controller and relevant log excerpt (.local/logs)

@@ -1,0 +1,22 @@
+name: Source checks
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Synthetic updater and installer tests
+        run: python -m unittest discover -s tests -p "test_*.py" -v
+      - name: Parse installer script
+        shell: powershell
+        run: |
+          $errors=$null; $tokens=$null
+          [void][System.Management.Automation.Language.Parser]::ParseFile("$PWD\scripts\install.ps1",[ref]$tokens,[ref]$errors)
+          if ($errors.Count) { $errors | ForEach-Object { Write-Error $_.Message }; exit 1 }
+      - name: Check public tree has no ROMs or private inputs
+        run: python -c "import sys;from pathlib import Path;bad=[str(p) for p in Path('.').rglob('*') if p.is_file() and (p.name.lower() in ('game.bin','smgp.zip') or p.parts[0] in ('.local','build','dist'))];print(bad);sys.exit(1 if bad else 0)"
