@@ -227,6 +227,7 @@ extern "C" void smgp_ach_overlay(int line,uint32_t*out,int width){
     for(int x=0;x<PW;++x)if(start+x>=0&&start+x<width)out[start+x]=toast_pixels[(line-6)*PW+x];
   }
 }
+extern "C" int smgp_ach_visible(void){return enabled&&(panel_open||(toast_ticks&&toast_dirty));}
 extern "C" unsigned smgp_ach_count(void){return (unsigned)items.size();}
 extern "C" unsigned smgp_ach_unlocked_count(void){unsigned n=0;for(const auto&a:items)n+=a.unlocked;return n;}
 extern "C" int smgp_ach_unlocked(unsigned i){return i<items.size()&&items[i].unlocked;}

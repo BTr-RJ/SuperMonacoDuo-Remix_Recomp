@@ -62,15 +62,15 @@ kept in the update record). `build/native20` stays fixed between versions for th
 
 ## Maintainers: publishing
 
-`tools/publish_release.py --version 0.60` builds `SuperMonacoDuoRecomp-0.60-Windows-x64.zip`,
+`tools/publish_release.py --version 0.60.1` builds `SuperMonacoDuoRecomp-0.60.1-Windows-x64.zip`,
 `PACKAGE-MANIFEST.json`, `SHA256SUMS.txt` and `release-asset.json`, refusing ROMs,
-`.local`, `build` and `smgp.zip`. Attach the ZIP to a `v0.60` release on GitHub.
+`.local`, `build` and `smgp.zip`. Attach the ZIP to a `v0.60.1` release on GitHub.
 The package contains `assets` derived from the arcade game; see
 [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md).
 
 ## Common problems
 
 - **ROMs not found:** check the SHA-256 values and choose the cartridge folder, not the whole disk.
-- **Compile failure:** keep `.local/install-0.60.log` and check free space and the C++ Build Tools.
+- **Compile failure:** keep `.local/install-0.60.1.log` and check free space and the C++ Build Tools.
 - **Tool checksum failure:** extract the ZIP again.
 - When reporting problems send the version, Windows, GPU and a log excerpt, never ROMs, generated code or saves.

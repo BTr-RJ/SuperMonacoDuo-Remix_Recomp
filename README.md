@@ -1,7 +1,7 @@
 # Super Monaco Duo-Remix Recomp
 
 A native Windows x64 fan project for **Super Monaco GP** (Mega Drive / Genesis, 1990)
-and **Ayrton Senna's Super Monaco GP II** (1992). Version **0.60** (Public Test) brings continuous zoom with arcade version sound
+and **Ayrton Senna's Super Monaco GP II** (1992). Version **0.60.1** (Public Test) brings continuous zoom with arcade version sound
 effects and art, team colours, analog steering, a victory theme in GP II and, new
 in this version, **offline RetroAchievements-set achievements** inside both games.
 The English installer builds both games locally from your own ROMs.
@@ -19,13 +19,13 @@ the release of current and future projects.
 
 ## Install and play
 
-**[Download version 0.60](https://github.com/BTr-RJ/SuperMonacoDuo-Remix_Recomp/releases/tag/v0.60)**
+**[Download version 0.60.1](https://github.com/BTr-RJ/SuperMonacoDuo-Remix_Recomp/releases/tag/v0.60.1)**
 (Public Test, Windows x64):
 
-- [Installer package](https://github.com/BTr-RJ/SuperMonacoDuo-Remix_Recomp/releases/download/v0.60/SuperMonacoDuoRecomp-0.60-Windows-x64.zip)
-- [SHA-256 checksums](https://github.com/BTr-RJ/SuperMonacoDuo-Remix_Recomp/releases/download/v0.60/SHA256SUMS.txt)
+- [Installer package](https://github.com/BTr-RJ/SuperMonacoDuo-Remix_Recomp/releases/download/v0.60.1/SuperMonacoDuoRecomp-0.60.1-Windows-x64.zip)
+- [SHA-256 checksums](https://github.com/BTr-RJ/SuperMonacoDuo-Remix_Recomp/releases/download/v0.60.1/SHA256SUMS.txt)
 
-1. Extract the complete **SuperMonacoDuoRecomp-0.60-Windows-x64.zip** package.
+1. Extract the complete **SuperMonacoDuoRecomp-0.60.1-Windows-x64.zip** package.
 2. Open **SuperMonacoDuoRecomp.exe** and choose **Install games**.
 3. Select your ROM folder(s) and an empty installation folder.
 4. Let the installer verify your files and compile both games locally.
@@ -65,7 +65,15 @@ Captured from a QA replay of controller input on the first track of each game, n
 played campaign. The GIFs are 5 seconds at 50 fps (the fastest rate browsers play reliably;
 the source is 59.94 Hz) with 128-colour palettes, so some edge colours are approximated. [Capture details and hashes](docs/media/0.50/comparison.json).
 
-## What's new in 0.60
+## What's new in 0.60.1
+
+- **Achievement toast and F6 panel now draw on top of races.** In 0.60 the road, HUD and
+  sprites composed on the GPU covered them during a race. They are now drawn after the
+  composition.
+- **Launcher "What's new"** lists the 0.60 features.
+- Screenshots for catalogues in [docs/media/0.60](docs/media/0.60).
+
+## What was in 0.60
 
 - **Offline achievements, from the RetroAchievements sets.** Both games carry the
   official core achievement sets from [RetroAchievements.org](https://retroachievements.org/)
@@ -108,7 +116,7 @@ the source is 59.94 Hz) with 128-colour palettes, so some edge colours are appro
 - **Smoother approach, tunnels and arches.** Many rounds of fixes for scenery and
   car approach, curves, tunnel entrance/exit (both games), arches and portals,
   the 16:9 side margins and the lateral camera of GP II. Details in
-  [the 0.50 release notes](docs/RELEASE-0.50.md) and [0.60 release notes](docs/RELEASE-0.60.md).
+  [the 0.50 release notes](docs/RELEASE-0.50.md) and [0.60](docs/RELEASE-0.60.md) and [0.60.1](docs/RELEASE-0.60.1.md) release notes.
 - **Widescreen.** 4:3, 16:9, 21:9 and 32:9 add side scenery in races; output
   from 960×540 to 3840×2160, windowed or fullscreen.
 - **CRT presets.** Pixel-perfect, linear, koko-aio (Balanced, Ambilight, Classic),

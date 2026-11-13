@@ -1,8 +1,8 @@
 # Project status
 
-Version 0.60 is the current public test of Super Monaco Duo-Remix Recomp for Windows x64,
+Version 0.60.1 is the current public test of Super Monaco Duo-Remix Recomp for Windows x64,
 covering Super Monaco GP (World) and Ayrton Senna's Super Monaco GP II (USA).
-See the release notes for [0.60](RELEASE-0.60.md) and [0.50](RELEASE-0.50.md).
+See the release notes for [0.60.1](RELEASE-0.60.1.md), [0.60](RELEASE-0.60.md) and [0.50](RELEASE-0.50.md).
 
 Open work, in rough order:
 

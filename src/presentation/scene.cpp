@@ -8,6 +8,7 @@ extern "C" {
 #include "png_write.h"
 }
 #include "scene.h"
+#include "achievements.h"
 #include <algorithm>
 #include <array>
 #include <cmath>
@@ -2487,7 +2488,18 @@ extern "C" void smgp_scene_renderer(SDL_Renderer *r){
  renderer_ready=r&&SDL_GetRendererInfo(r,&info)==0&&(info.flags&SDL_RENDERER_ACCELERATED)&&(info.flags&SDL_RENDERER_TARGETTEXTURE);
  if(!renderer_ready)fprintf(stderr,"[SMGP GPU] hardware composition unavailable; preserving native sprites\n");
 }
+static const uint32_t *gpu_compose_inner(SDL_Renderer*r,const uint32_t*input,int stride,int width,int height,uint64_t frame);
+// The achievement toast and F6 panel are host overlays: draw them after the GPU composition,
+// otherwise the road, HUD and sprites composed here would cover them during races.
 extern "C" const uint32_t *smgp_gpu_compose(SDL_Renderer*r,const uint32_t*input,int stride,int width,int height,uint64_t frame){
+ const uint32_t*picture=gpu_compose_inner(r,input,stride,width,height,frame);
+ if(!picture||!smgp_ach_visible()||height!=224)return picture;
+ static std::vector<uint32_t> with_overlay;
+ with_overlay.assign(picture,picture+size_t(stride)*height);
+ for(int line=0;line<height;line++)smgp_ach_overlay(line,with_overlay.data()+size_t(line)*stride,width);
+ return with_overlay.data();
+}
+static const uint32_t *gpu_compose_inner(SDL_Renderer*r,const uint32_t*input,int stride,int width,int height,uint64_t frame){
  if(result_retire&&smooth_zoom&&height==224&&r){
   load_arcade();
   if(shared_retire.width){

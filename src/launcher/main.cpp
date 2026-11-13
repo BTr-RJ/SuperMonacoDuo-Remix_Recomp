@@ -27,7 +27,7 @@
 namespace fs=std::filesystem;
 using namespace Gdiplus;
 #ifndef SMGP_VERSION
-#define SMGP_VERSION "0.60"
+#define SMGP_VERSION "0.60.1"
 #endif
 #define WIDEN2(x) L##x
 #define WIDEN(x) WIDEN2(x)
@@ -269,7 +269,7 @@ static void render(HWND hwnd,HDC dc){
  text(g,state.c_str(),44,761,840,22,14,muted);
  text(g,L"Analog steering, pedals and keys\nare set in Controls.",952,609,284,48,15,muted);
  text(g,L"WHAT\u2019S NEW",952,398,284,26,20,ink,true);
- text(g,L"Continuous zoom with sound effects\nArcade art and more trackside objects\nTeam colours and analog steering\nVictory theme in GP II",952,430,300,100,15,muted);
+ text(g,L"Offline achievements (F6) in both games\nGame Over and Retire zoom hand-off\nContinuous zoom, arcade art and sound\nTeam colours and analog steering",952,430,300,100,15,muted);
  text(g,L"Arrow keys: choose     Enter: play",42,128,1000,20,14,muted);
  text(g,(std::wstring(L"v")+kVersion+L" / Windows x64").c_str(),1040,762,200,22,14,muted);
  Graphics screen(dc);screen.DrawImage(&buffer,0,0);}

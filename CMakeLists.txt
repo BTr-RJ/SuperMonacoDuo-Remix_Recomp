@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.21)
-project(SuperMonacoDuoRecomp VERSION 0.60.0 LANGUAGES C CXX)
+project(SuperMonacoDuoRecomp VERSION 0.60.1 LANGUAGES C CXX)
 option(SMGP_COPY_ROOT_LAUNCHER "Update the root launcher after a local build" ON)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
